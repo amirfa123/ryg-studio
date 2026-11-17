@@ -49,7 +49,7 @@ Format: question — category — science hook.
 ### Body / everyday
 8. **What happens to your body when you get really mad?** — body (#anger, rides the "I Got So Mad" trend) — Adrenaline: heart rate spikes, blood rushes to muscles, your face flushes, and digestion pauses.
 9. **Why do you get so sleepy after Thanksgiving dinner?** — body (#thanksgiving) — It's not really the turkey's tryptophan. A huge meal sends blood and energy to your gut, and your body flips into "rest and digest".
-10. **Why do you get brain freeze?** — body (#brainfreeze) — Cold hits the roof of your mouth, blood vessels rapidly widen, and a nerve in your face reports it as a headache.
+10. ✅ **Why do you get brain freeze?** — body (#brainfreeze) — Cold hits the roof of your mouth, blood vessels rapidly widen, and a nerve in your face reports it as a headache.
 11. **Why do your fingers wrinkle in water?** — body (#fingers) — It's your nervous system shrinking blood vessels on purpose (probably for grip). Fingers with cut nerves don't wrinkle.
 12. **Why do you hiccup?** — body (#hiccups) — Your diaphragm spasms, and your vocal cords snap shut a split second later. That snap is the "hic".
 13. **Why do your ears pop on a plane?** — body (#ears) — Air pressure changes and a tiny tube behind your nose opens to even it out. Pop.
