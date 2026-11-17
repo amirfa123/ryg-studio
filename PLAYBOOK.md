@@ -74,7 +74,7 @@ Work in `w_<slug>/` at repo root (gitignored; the template's `../` imports need 
 
 ## Publishing
 1. Clone `https://github.com/amirfa123/ryg-videos` (public). Copy the final video to `shorts/YYYY-MM-DD_<slug>.mp4` (long-form: `long/YYYY-MM-DD_<slug>.mp4`), commit, push to `main`. Public URL: `https://raw.githubusercontent.com/amirfa123/ryg-videos/main/<path>` (check it returns 200 with `curl -sI`).
-2. Metricool `createScheduledPost`, blogId **8164865**, timezone America/New_York, autoPublish true, same media URL and same time. Captions differ per platform, so make **3 posts per short**:
+2. Metricool `createScheduledPost`, blogId **8164865**, timezone America/New_York, autoPublish true, same media URL and same time. Captions differ per platform, so make **separate posts per platform** (YouTube only for the day's best 3 — see the YouTube section):
    - **Instagram + Facebook** (one post): providers instagram (type REEL, isAiGenerated false) + facebook (type REEL, title = the question). Text: `<Question> #trending #funfact #viral #reels #<topic>`
    - **TikTok**: provider tiktok (isAigc false, PUBLIC_TO_EVERYONE, title = the question). Text: `<Question> #trending #funfact #viral #fyp #<topic>`
    - **YouTube**: provider youtube (type short, madeForKids false, category SCIENCE_TECHNOLOGY, isAiGeneratedContent false, tags = topic words).
@@ -87,6 +87,14 @@ Work in `w_<slug>/` at repo root (gitignored; the template's `../` imports need 
 
 ## AI labels
 Owner's decision: do NOT apply AI-content labels anywhere. Always send isAiGenerated false (Instagram), isAigc false (TikTok), isAiGeneratedContent false (YouTube).
+
+## YouTube: only the BEST 3 shorts per day (trust-building phase)
+TikTok, Instagram and Facebook get all 6 shorts. **YouTube gets only 3 per day** (long-form is separate and doesn't count).
+- **~1 AM run:** schedule IG+FB and TikTok for all 3 videos as usual. Pick the **single best** of its 3 for YouTube and schedule it at ~11:00 (jittered).
+- **~10 AM run:** schedule IG+FB and TikTok for its 3. Then pick the **best 2** from: its own 3 + the morning run's 2 videos that did NOT go to YouTube (their files are in ryg-videos/shorts/ dated today; topics.md says which went to YouTube). Schedule them on YouTube at ~17:00 and ~20:00 (jittered).
+- **"Best" =** (1) early performance: for morning videos already live on TikTok/Instagram, check Metricool analytics (views, likes, shares, watch time) and favor the strongest; (2) animation quality from your stills check (cleanest, most visually impressive, no awkward shots); (3) strongest hook / most trending topic (GTA 6 during the spotlight).
+- Before scheduling, count today's YouTube shorts in getScheduledPosts + already published; never exceed 3 per day.
+- Log in topics.md which videos went to YouTube (mark `[YT]`).
 
 ## Avoid looking automated (YouTube is the #1 platform)
 YouTube demonetizes "generic or repetitive" mass-produced channels. Keep every upload clearly distinct:

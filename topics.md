@@ -16,3 +16,5 @@ Format: - Question (category) [date/slot]
 - Why do you get brain freeze? (body/everyday) [scheduled 2026-11-17 11:00]
 - What would happen if you skydived from the edge of space? (crazy what-if) [scheduled 2026-11-17 14:00]
 - What would happen if Godzilla was real? (long-form, pop culture / what-if) [scheduled 2026-11-17 18:00]
+
+<!-- 2026-11-17: GTA car jump went to YouTube at 08:00 [YT]. Brain freeze + space skydive YouTube posts were moved back to drafts so the 10 AM run picks today's best 2 for 17:00/20:00. -->
