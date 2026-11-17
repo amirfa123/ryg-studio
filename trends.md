@@ -38,7 +38,7 @@ Sources: Metricool (IG + FB; YouTube returned no stats; TikTok returned no rows,
 Format: question — category — science hook.
 
 ### Pop culture / trending
-1. **What would happen if you jumped out of a moving car like in GTA?** — pop culture (#gta6) — At 100 km/h you keep going at 28 m/s; hitting the road is like falling off a 13-storey building.
+1. ✅ **What would happen if you jumped out of a moving car like in GTA?** — pop culture (#gta6) — At 100 km/h you keep going at 28 m/s; hitting the road is like falling off a 13-storey building.
 2. **Could Godzilla actually exist?** — pop culture (#godzilla) — Scale a lizard up 50× and it gets 125,000× heavier, but its bones only get 2,500× stronger. Its legs snap. Stand-in: a generic green giant lizard, no spines that copy the design.
 3. **What would happen if you got hit by a Haaland shot?** — pop culture (#haaland) — A ~120 km/h ball stops in about a hundredth of a second, briefly pushing with the force of a ~140 kg weight. Plain red kit, no crest.
 4. **How long could you actually survive in the Hunger Games?** — pop culture (#hungergames) — Rule of threes: ~3 minutes without air, ~3 days without water, ~3 weeks without food. Water is what gets you.
