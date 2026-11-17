@@ -15,7 +15,7 @@ Every scheduled run follows this file. Read it fully before starting.
 5. **No awkward/goofy animation.** If a pose would look wrong (floating objects, arms through body), restage the shot instead (put objects on tables, use IK `reachL/reachR` with `bellyPoint()` for contact).
 6. Facts must be true — check anything non-obvious with a quick web search before writing. Keep claims simple and defensible.
 7. Never repeat a topic in `topics.md`. Add every new topic there.
-8. No copyrighted characters, logos, songs. Music + SFX come only from `sfxlib.py` (free, synthesized).
+8. No copyrighted characters or logos. **Music: always `assets/music_funny.m4a`** (the owner's chosen track, owner accepts the risk). SFX come from `sfxlib.py` — do NOT call `.bed()` (no synthesized music).
 
 ## Credits budget (ElevenLabs, Creator plan, 147,324 / month, refills ~16th)
 - Shorts: 6/day × ~300 = ~54k/month. Long-form: every other day × ~4,200 = ~63k/month.
@@ -32,16 +32,23 @@ Work in `w_<slug>/` at repo root (gitignored; the template's `../` imports need 
    Build: `python3 build.py w_<slug> w_<slug>/body.js` → `w_<slug>/video.html`.
 6. **Look before rendering:** `node cap.js w_<slug>/video.html stills 0.5,3,6,9,12,15,TT-0.02 w_<slug>/st` → hstack into a contact sheet with ffmpeg and **Read it**. Fix cropping, overlaps (pills vs title vs captions at y≈1420), clipping, character too small/large, and confirm first/last frames match. Iterate until good.
 7. **Render:** `node cap.js w_<slug>/video.html video w_<slug>/video.mp4 <round(TT*30)>` (~3 min). Run renders in the background and do the next video's prep meanwhile.
-8. **SFX:** script with `sfxlib.py` (`Mix(T,seed)`, `.put(sound,at,gain)`, `.bed(gates)`, `.save()`) — see `examples/sfx_example.py`. Hit every visual beat (whoosh on moves, pop on pills, ding/shimmer on reveals, etc.).
-9. **Mix:**
+8. **SFX:** script with `sfxlib.py` (`Mix(T,seed)`, `.put(sound,at,gain)`, `.save()`; never `.bed()`) — see `examples/sfx_example.py`. The owner wants LOTS of fitting sound effects (whoosh on moves, pop on pills, ding/shimmer on reveals, thuds, screeches, stretches…) but they must never overpower the narrator. Keep wind/air/whoosh gains low (wind ≤ 0.3, whoosh ≤ 0.5).
+9. **Mix (owner-approved levels — do not change):** voice at normal volume, SFX at 0.35, music at a constant 0.15 the whole video. **No ducking, no sidechain, no volume changes during the video.**
    ```
-   ffmpeg -i video.mp4 -i vo.mp3 -i sfx.wav -filter_complex "[1:a]aresample=44100,asplit=2[v][sc];[2:a]aresample=44100,volume=0.6[b];[b][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=300[bd];[v][bd]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -t <TT> -movflags +faststart final.mp4
+   ffmpeg -i video.mp4 -i vo.mp3 -i sfx.wav -stream_loop -1 -i ../assets/music_funny.m4a -filter_complex "[1:a]aresample=44100,volume=1.0[v];[2:a]aresample=44100,volume=0.35[s];[3:a]aresample=44100,volume=0.15[m];[v][s][m]amix=inputs=3:duration=first:normalize=0,alimiter=limit=0.95[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -t <TT> -movflags +faststart final.mp4
    ```
+   (`duration=first` uses the video length; the video must be ≥ TT.) Sanity check with volumedetect: voice mean should sit ~12–16 dB above music and SFX means.
 10. **Verify** final: extract frames at 0, middle, TT-0.05 and Read them; check duration.
 
 ## Publishing
 1. Clone `https://github.com/amirfa123/ryg-videos` (public). Copy the final video to `shorts/YYYY-MM-DD_<slug>.mp4` (long-form: `long/YYYY-MM-DD_<slug>.mp4`), commit, push to `main`. Public URL: `https://raw.githubusercontent.com/amirfa123/ryg-videos/main/<path>` (check it returns 200 with `curl -sI`).
-2. Metricool `createScheduledPost`, blogId **8164865**, timezone America/New_York, autoPublish true. Shorts: providers instagram (type REEL, isAiGenerated true), tiktok (isAigc true, PUBLIC_TO_EVERYONE, title = the question), youtube (type short, madeForKids false, category SCIENCE_TECHNOLOGY, title "<Question> #shorts", 3–6 tags, isAiGeneratedContent false), facebook (type REEL, title). Caption text = the question + 1–2 emojis + 5–6 hashtags (#whatif #science …).
+2. Metricool `createScheduledPost`, blogId **8164865**, timezone America/New_York, autoPublish true, same media URL and same time. Captions differ per platform, so make **3 posts per short**:
+   - **Instagram + Facebook** (one post): providers instagram (type REEL, isAiGenerated true) + facebook (type REEL, title = the question). Text: `<Question> #trending #funfact #viral #reels #<topic>`
+   - **TikTok**: provider tiktok (isAigc true, PUBLIC_TO_EVERYONE, title = the question). Text: `<Question> #trending #funfact #viral #fyp #<topic>`
+   - **YouTube**: provider youtube (type short, madeForKids false, category SCIENCE_TECHNOLOGY, isAiGeneratedContent false, title = the question exactly, tags = topic words). Text: `<Question> #trending #funfact #viral #shorts #<topic>`
+   - `<Question>` = the exact question with a capital first letter and a question mark, e.g. `What would happen if you fell into a black hole?` No emojis.
+   - `#<topic>` = ONE hashtag for the subject, lowercase, no spaces (black hole → `#blackhole`, bees → `#bee`, Earth → `#earth`).
+   - Long-form uses the same pattern without the platform tag (YouTube type video; Facebook type POST).
 3. Before scheduling, call `getScheduledPosts` for that day and only fill **empty** slots — never double-book.
 
 ## Daily slots (America/New_York)

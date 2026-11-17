@@ -8,14 +8,14 @@ def rewind(d):x=tt(d);f=600+1800*(x/d);return (np.sign(np.sin(2*np.pi*np.cumsum(
 def flip():return lp(nz(0.08),6)*env(0.08,0.002,40)*0.8
 # Earth stop
 m=Mix(17.3,3)
-m.put(shimmer(),0.05,0.6);m.put(wind(3.8),0.1,0.25);m.put(screech(0.8),3.92,0.9);m.put(thud(),4.0,0.8);m.put(sting(),4.1,0.5)
+m.put(shimmer(),0.05,0.6);m.put(wind(3.8),0.1,0.08);m.put(screech(0.8),3.92,0.9);m.put(thud(),4.0,0.8);m.put(sting(),4.1,0.5)
 m.put(slide(300,1400,0.5),4.95,0.8);m.put(whoosh(0.9),5.0,1.0);m.put(pop(),5.05,0.5)
-m.put(wind(4.3),5.95,0.9);m.put(whoosh(0.6),6.0,0.7);m.put(ding(1318),9.2,0.4)
+m.put(wind(4.3),5.95,0.3);m.put(whoosh(0.6),6.0,0.7);m.put(ding(1318),9.2,0.4)
 m.put(squish(0.7),10.4,0.7);m.put(squish(0.6),11.1,0.8);m.put(bloop(),11.15,0.6)
 for k in range(5):m.put(flip(),13.2+k*0.38,0.9)
 m.put(ding(784),13.35,0.35);m.put(bloop(0.7),14.5,0.5)
 m.put(whoosh(0.8),15.6,0.8);m.put(thud(),16.45,1.0);m.put(pop(800),16.5,0.4)
-m.bed([(3.9,4.4,0.2),(15.5,16.6,0.6)]);m.save('spin/sfx.wav')
+m.save('spin/sfx.wav')
 # Black hole
 m=Mix(19.9,4)
 m.put(rumble(19.8),0.05,0.5);m.put(shimmer(),0.05,0.5);m.put(growl(1.2),3.0,0.35);m.put(sting(),3.6,0.5)
@@ -32,4 +32,4 @@ while True:
     m.put(tick(),tt0,0.8)
 m.put(sting(),16.65,0.4)
 m.put(rewind(1.5),18.2,0.9);m.put(pop(700),19.75,0.4)
-m.bed([(12.5,18.2,0.45),(18.2,19.8,0.2)]);m.save('bh/sfx.wav')
+m.save('bh/sfx.wav')
