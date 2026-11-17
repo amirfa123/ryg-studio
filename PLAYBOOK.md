@@ -80,7 +80,7 @@ Shorts: **8:00, 11:00, 14:00, 17:00, 20:00, 22:00**. Long-form (every other day)
 ## Long-form (~5 min, 16:9)
 - **Topic choice:** pick the idea most likely to resonate — check Metricool analytics for which shorts got the most views/engagement and go deeper on that theme (or the strongest idea in trends.md). Over time, follow what the audience responds to.
 - **Style:** more in-depth and engaging than shorts: open with the big question, then build with chapter questions and dramatic pauses ("So what happens next? …" with a 1–2 s beat), "guess before I tell you" moments, surprising facts, escalating stakes, and a satisfying final answer.
-- **Audio: narration ONLY.** No background music, no sound effects. (Just the voice track muxed onto the video.)
+- **Audio: narration + sound effects, NO music.** Same SFX approach and levels as shorts (voice 1.0, SFX 0.35), just drop the music input from the mix.
 - 1920×1080: build with `W=1920,H=1080` (edit those consts in the built page) and render with `VW=1920 VH=1080 node cap.js ...`. Camera aspect follows W/H.
 - Script ≈ 700–750 words: a deeper "What would happen if…" told in 6–10 chapters, each with its own scene, same character, same style. Still opens with the question. Ends with a short natural outro (no loop needed).
 - Split into chapter pages (one body per chapter, each ≤ ~40 s), render each to its own mp4, concat with the ffmpeg concat demuxer (`-c copy`), then mix the full voice + SFX. Use one voice generation for the whole script (or per chapter if > 5,000 chars).
