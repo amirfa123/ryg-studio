@@ -7,6 +7,9 @@ Every scheduled run follows this file. Read it fully before starting.
 - Format the owner loves: absurd but true-science **"What would happen if…"** scenarios (the hole-through-the-Earth video is the gold standard: great animation, great sound effects, genuinely interesting).
 - Character (never change): heavyset, **yellow skin (non-negotiable)**, short dark hair, mustache, round glasses, teal tracksuit with white stripes, orange sneakers, exposed yellow belly with belly button, rounded shoulders. Built in `yrg3d.js` → `makeYRG()`. Original character — never make him look like any existing cartoon.
 
+## Owner's ideas (ideas.md) — highest priority
+Read `ideas.md` every run. Owner-requested ideas go first: make the oldest unchecked one in the next run where it fits, then mark it ✅ with the date. Real public figures: facts only (look up current numbers), never draw them, no logos, no opinions.
+
 ## Weekly trend research (trends.md)
 `trends.md` is rewritten every week by the trend-scout run. Daily runs MUST read it and take the pop-culture/trending topic (and ideally other topics) from its idea list, marking used ideas with ✅.
 Audience: **teens and young adults (~13–24)** — TikTok/Reels/Shorts crowd. Think anime, gaming, viral TikTok trends and memes, football/NBA moments, streamers' bits, new movies/shows young people are watching. NOT what older adults care about.
