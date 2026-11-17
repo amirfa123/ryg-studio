@@ -11,6 +11,15 @@ Every scheduled run follows this file. Read it fully before starting.
 `trends.md` is rewritten every week by the trend-scout run. Daily runs MUST read it and take the pop-culture/trending topic (and ideally other topics) from its idea list, marking used ideas with ✅.
 Audience: **teens and young adults (~13–24)** — TikTok/Reels/Shorts crowd. Think anime, gaming, viral TikTok trends and memes, football/NBA moments, streamers' bits, new movies/shows young people are watching. NOT what older adults care about.
 
+## 🔥 SPOTLIGHT: GTA 6 (launches Thu Nov 19, 2026) — active Nov 17 → Dec 6
+The owner wants GTA 6 as a main spotlight — it's huge with the audience.
+- **Shorts:** at least **2 of the 6 shorts per day are GTA 6 themed** (3 on launch day Nov 19 and the day after). Other categories fill the rest. Use trends.md's GTA ideas plus new ones, e.g. "How many stores would you need to rob in GTA 6 to make a million dollars?", "What would happen if you jumped out of a moving car like in GTA?", "How long would GTA 6 take to download on bad Wi-Fi?", "Could you survive a real GTA police chase?"
+- **Long-form:** Nov 19 (launch day): "Could you survive real-life GTA stunts?" (or similar hype topic). **Nov 21: "How to get rich fast in GTA 6"** — research real post-launch money guides/methods and present them engagingly (best money methods, how many of X to reach $1M, etc.). Keep doing GTA long-forms while they perform.
+- **Facts:** before Nov 19, GTA 6's in-game prices/payouts are NOT known — don't invent them. Use verified GTA 5 numbers clearly labeled as GTA 5, real-world physics/money, or "we'll find out Thursday" framing. After launch, use numbers from reputable guides found via web search and say "about".
+- **Keep it clearly in-game / cartoon:** "robbing stores" etc. is about the game's mechanics — never give real-world crime how-tos.
+- **Visuals (no tacky stuff):** sleek original sports cars driving down neon, palm-lined Miami-style streets at sunset, beaches, money stacks on tables, cash-counter overlays climbing to $1,000,000, police lights, helicopters, Round Yellow Guy driving/running/diving — real staging, no floating props, no awkward holding poses.
+- **IP rules still apply:** you can SAY "GTA 6" in the question/captions/hashtags (#gta6, #gta). Do NOT draw Rockstar/GTA logos or title font, Jason/Lucia or any game characters, the real in-game map, copied HUD/wanted-star UI, or real car brands. Use original stand-ins.
+
 ## Topic mix (rotate every day — never 6 of the same kind)
 Every short still OPENS WITH A QUESTION and loops. Per day of 6, aim for roughly:
 - **2 × body / everyday "what happens / why"** — e.g. "What happens when you crack your knuckles?", "Why do you yawn?", "What happens if you hold in a sneeze?"
