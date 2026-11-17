@@ -67,7 +67,7 @@ Format: question — category — science hook.
 21. **How do cats always land on their feet?** — wildcard/animals (#cat) — Mid-fall they twist the front half one way and the back half the other, flipping over without pushing on anything.
 
 ### Long-form ideas (~5 min, 16:9)
-- **A. What would happen if Godzilla was real?** (rides the #1 movie) Chapters:
+- ✅ **A. What would happen if Godzilla was real?** (rides the #1 movie) Chapters:
   1. How big is it really?
   2. The square-cube problem.
   3. Could it breathe?
