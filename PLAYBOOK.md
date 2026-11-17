@@ -75,13 +75,16 @@ Work in `w_<slug>/` at repo root (gitignored; the template's `../` imports need 
 ## Publishing
 1. Clone `https://github.com/amirfa123/ryg-videos` (public). Copy the final video to `shorts/YYYY-MM-DD_<slug>.mp4` (long-form: `long/YYYY-MM-DD_<slug>.mp4`), commit, push to `main`. Public URL: `https://raw.githubusercontent.com/amirfa123/ryg-videos/main/<path>` (check it returns 200 with `curl -sI`).
 2. Metricool `createScheduledPost`, blogId **8164865**, timezone America/New_York, autoPublish true, same media URL and same time. Captions differ per platform, so make **3 posts per short**:
-   - **Instagram + Facebook** (one post): providers instagram (type REEL, isAiGenerated true) + facebook (type REEL, title = the question). Text: `<Question> #trending #funfact #viral #reels #<topic>`
-   - **TikTok**: provider tiktok (isAigc true, PUBLIC_TO_EVERYONE, title = the question). Text: `<Question> #trending #funfact #viral #fyp #<topic>`
+   - **Instagram + Facebook** (one post): providers instagram (type REEL, isAiGenerated false) + facebook (type REEL, title = the question). Text: `<Question> #trending #funfact #viral #reels #<topic>`
+   - **TikTok**: provider tiktok (isAigc false, PUBLIC_TO_EVERYONE, title = the question). Text: `<Question> #trending #funfact #viral #fyp #<topic>`
    - **YouTube**: provider youtube (type short, madeForKids false, category SCIENCE_TECHNOLOGY, isAiGeneratedContent false, title = the question exactly, tags = topic words). Text: `<Question> #trending #funfact #viral #shorts #<topic>`
    - `<Question>` = the exact question with a capital first letter and a question mark, e.g. `What would happen if you fell into a black hole?` No emojis.
    - `#<topic>` = ONE hashtag for the subject, lowercase, no spaces (black hole → `#blackhole`, bees → `#bee`, Earth → `#earth`).
    - Long-form uses the same pattern without the platform tag (YouTube type video; Facebook type POST).
 3. Before scheduling, call `getScheduledPosts` for that day and only fill **empty** slots — never double-book.
+
+## AI labels
+Owner's decision: do NOT apply AI-content labels anywhere. Always send isAiGenerated false (Instagram), isAigc false (TikTok), isAiGeneratedContent false (YouTube).
 
 ## Daily slots (America/New_York)
 Shorts: **8:00, 11:00, 14:00, 17:00, 20:00, 22:00**. Long-form (every other day): **18:00** on YouTube (type video) + Facebook (type POST/REEL as appropriate).
