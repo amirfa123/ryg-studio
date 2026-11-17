@@ -77,7 +77,9 @@ Work in `w_<slug>/` at repo root (gitignored; the template's `../` imports need 
 2. Metricool `createScheduledPost`, blogId **8164865**, timezone America/New_York, autoPublish true, same media URL and same time. Captions differ per platform, so make **3 posts per short**:
    - **Instagram + Facebook** (one post): providers instagram (type REEL, isAiGenerated false) + facebook (type REEL, title = the question). Text: `<Question> #trending #funfact #viral #reels #<topic>`
    - **TikTok**: provider tiktok (isAigc false, PUBLIC_TO_EVERYONE, title = the question). Text: `<Question> #trending #funfact #viral #fyp #<topic>`
-   - **YouTube**: provider youtube (type short, madeForKids false, category SCIENCE_TECHNOLOGY, isAiGeneratedContent false, title = the question exactly, tags = topic words). Text: `<Question> #trending #funfact #viral #shorts #<topic>`
+   - **YouTube**: provider youtube (type short, madeForKids false, category SCIENCE_TECHNOLOGY, isAiGeneratedContent false, tags = topic words).
+     - **Title (shown on Shorts — HARD LIMIT 100 characters, count it!):** `<Question> #shorts #<topic>` then add `#funfact`, `#viral`, `#trending` in that order only while the total stays ≤ 100 characters. E.g. `What would happen if you jumped out of a moving car like in GTA? #shorts #gta6 #funfact #viral` (95). If the question alone is long, keep at least `#shorts #<topic>`; shorten the question wording if needed — never exceed 100.
+     - **Description (text):** `<Question>` + one unique, natural sentence teasing the answer (different every video, written like a person, no hype words repeated across videos) + blank line + `#trending #funfact #viral #shorts #<topic>`.
    - `<Question>` = the exact question with a capital first letter and a question mark, e.g. `What would happen if you fell into a black hole?` No emojis.
    - `#<topic>` = ONE hashtag for the subject, lowercase, no spaces (black hole → `#blackhole`, bees → `#bee`, Earth → `#earth`).
    - Long-form uses the same pattern without the platform tag (YouTube type video; Facebook type POST).
@@ -85,6 +87,14 @@ Work in `w_<slug>/` at repo root (gitignored; the template's `../` imports need 
 
 ## AI labels
 Owner's decision: do NOT apply AI-content labels anywhere. Always send isAiGenerated false (Instagram), isAigc false (TikTok), isAiGeneratedContent false (YouTube).
+
+## Avoid looking automated (YouTube is the #1 platform)
+YouTube demonetizes "generic or repetitive" mass-produced channels. Keep every upload clearly distinct:
+- **Vary the hook wording** — rotate "What would happen if…", "Why do you…", "What happens when…", "Could you survive…", "How many…", "Is it possible to…". Never more than 2 of the same opener in one day.
+- **Vary visuals per video**: different color palettes, locations, camera moves and overlay layouts; no two videos in a day share the same main scene.
+- **Unique description sentence** for every YouTube upload (see Publishing).
+- **Jitter publish times**: schedule each slot at a random minute offset between −12 and +12 minutes (e.g. 8:07, 10:53), never exactly on the hour.
+- Facts must be genuinely researched; the narration should add real insight, not filler.
 
 ## Daily slots (America/New_York)
 Shorts: **8:00, 11:00, 14:00, 17:00, 20:00, 22:00**. Long-form (every other day): **18:00** on YouTube (type video) + Facebook (type POST/REEL as appropriate).
