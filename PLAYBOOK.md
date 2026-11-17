@@ -7,8 +7,27 @@ Every scheduled run follows this file. Read it fully before starting.
 - Format the owner loves: absurd but true-science **"What would happen if…"** scenarios (the hole-through-the-Earth video is the gold standard: great animation, great sound effects, genuinely interesting).
 - Character (never change): heavyset, **yellow skin (non-negotiable)**, short dark hair, mustache, round glasses, teal tracksuit with white stripes, orange sneakers, exposed yellow belly with belly button, rounded shoulders. Built in `yrg3d.js` → `makeYRG()`. Original character — never make him look like any existing cartoon.
 
+## Topic mix (rotate every day — never 6 of the same kind)
+Every short still OPENS WITH A QUESTION and loops. Per day of 6, aim for roughly:
+- **2 × body / everyday "what happens / why"** — e.g. "What happens when you crack your knuckles?", "Why do you yawn?", "What happens if you hold in a sneeze?"
+- **2 × crazy "What would happen if…" scenarios** — e.g. jump through the Earth, shrink to ant size, Moon disappears.
+- **1 × pop culture / trending** — anime, games, movies, sports, memes that are trending NOW (do a quick web search each run for what's trending). Answer with real science/facts, played for laughs. E.g. "What would happen if Attack on Titan was real?" (square-cube law: a 15 m human would collapse under its own weight), "What if Man United played on the Moon?". Keep jokes light and good-natured — no mocking real people, no politics, nothing mean.
+- **1 × wildcard** (food, animals, space, history "what if") — whatever fits the day.
+Log the category next to each topic in `topics.md`.
+
+### Pop culture & IP rules (strict)
+- You MAY name the show/team/game in the question, captions and hashtags.
+- You must NOT draw copyrighted characters, team crests/logos, official kits, or real people's likenesses. Stage it with Round Yellow Guy + ORIGINAL stand-ins (a generic giant, a plain red football kit with no crest, an unnamed stadium, etc.). Never make a stand-in that is a recognisable copy.
+- Hashtags: you may add the show/team as the topic tag (#attackontitan, #manutd).
+
+## Animation quality (what the owner loves vs. hates)
+- LOVED: the hole-through-the-Earth video — clear journey with several distinct scenes, the character's whole body acting (jumping, flailing, floating, popping out), big readable 2D cutaway diagram with a moving "YOU" marker, speedometer/counter overlays, comic words, tons of fitting SFX, satisfying physical payoff (pops out, hangs, falls back).
+- DISLIKED: the black hole video — stretching/squashing the character with non-uniform scale looked wrong, and long stretches of one static setup. **Never deform/stretch the character's body.** Show physical effects with props, diagrams, arrows, side-by-side comparisons, or a cutaway instead.
+- Every short needs **4–6 scene changes** (new camera, location or diagram roughly every 3–4 s), the character doing something physical in most of them, and at least one clear "wow" visual moment.
+- Prefer real staging over awkward poses: put things on tables, have him sit/stand/walk/fall/run, use IK reaches for contact. If a shot looks awkward in the stills check, restage it rather than ship it.
+
 ## Hard rules for every short
-1. **Open with a question** (narration line 1 + big title text on screen for ~3 s).
+1. **Open with a question** (narration line 1 + big title text on screen for ~3 s). Styles vary: "What happens when…", "Why do you…", "What would happen if…".
 2. **Instant loop**: no "follow for more". Narration ends with **"Which makes you wonder..."** and the last frame must match the first frame (camera, pose, scene) so it loops into the opening question. Periodic motions in the opening must use `t-TT` in the final segment.
 3. 9:16, 1080×1920, 30 fps, ~16–21 s. Script ≈ 45–55 words (≈ 270–330 ElevenLabs credits).
 4. Word-timed captions (built in, from transcription), comic pop words, pills, flashes, SFX + music bed.

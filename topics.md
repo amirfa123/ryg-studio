@@ -1,4 +1,5 @@
 # Topics already made (never repeat)
+Format: - Question (category) [date/slot]
 
 - What happens when you crack your knuckles?
 - Why does your stomach growl?
