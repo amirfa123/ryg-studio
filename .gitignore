@@ -1,0 +1,6 @@
+node_modules/
+w_*/
+__pycache__/
+*.mp4
+*.jpg
+!assets/*
