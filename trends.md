@@ -44,10 +44,10 @@ Format: question — category — science hook.
 4. **How long could you actually survive in the Hunger Games?** — pop culture (#hungergames) — Rule of threes: ~3 minutes without air, ~3 days without water, ~3 weeks without food. Water is what gets you.
 5. **What would happen if you got a cyberpunk robot arm?** — pop culture (#cyberpunk) — The arm could lift a car, but your spine and shoulder are still human. Your own skeleton is the weak link.
 6. **How high do you have to jump to dunk over four people?** — pop culture (#nba) — Hang time: a 1 m vertical leap gives under a second in the air (t = 2√(2h/g) ≈ 0.9 s). Unnamed player, plain jersey.
-7. **How long would GTA 6 take to download on bad Wi-Fi?** — pop culture (#gta6) — 200+ GB is 1,600 gigabits: about 9 hours at 50 Mbps, and over 2 weeks at 1 Mbps.
+7. ✅ **How long would GTA 6 take to download on bad Wi-Fi?** — pop culture (#gta6) — 200+ GB is 1,600 gigabits: about 9 hours at 50 Mbps, and over 2 weeks at 1 Mbps.
 
 ### Body / everyday
-8. **What happens to your body when you get really mad?** — body (#anger, rides the "I Got So Mad" trend) — Adrenaline: heart rate spikes, blood rushes to muscles, your face flushes, and digestion pauses.
+8. ✅ **What happens to your body when you get really mad?** — body (#anger, rides the "I Got So Mad" trend) — Adrenaline: heart rate spikes, blood rushes to muscles, your face flushes, and digestion pauses.
 9. **Why do you get so sleepy after Thanksgiving dinner?** — body (#thanksgiving) — It's not really the turkey's tryptophan. A huge meal sends blood and energy to your gut, and your body flips into "rest and digest".
 10. ✅ **Why do you get brain freeze?** — body (#brainfreeze) — Cold hits the roof of your mouth, blood vessels rapidly widen, and a nerve in your face reports it as a headache.
 11. **Why do your fingers wrinkle in water?** — body (#fingers) — It's your nervous system shrinking blood vessels on purpose (probably for grip). Fingers with cut nerves don't wrinkle.
@@ -58,7 +58,7 @@ Format: question — category — science hook.
 ### Crazy "what would happen if…"
 15. ✅ **What would happen if you skydived from the edge of space?** — what-if (#space) — From ~39 km up there's so little air that a falling person can break the sound barrier (record ~1,357 km/h). Same journey format as fall-through-Earth.
 16. **What would happen if the Sun suddenly disappeared?** — what-if (#sun) — You wouldn't know for 8 min 20 s: light and gravity both take that long to reach us.
-17. **What would happen if you tried to stand on Jupiter?** — what-if (#jupiter) — There's no ground. You'd sink through thickening gas, and the crushing pressure would get you long before any "surface".
+17. ✅ **What would happen if you tried to stand on Jupiter?** — what-if (#jupiter) — There's no ground. You'd sink through thickening gas, and the crushing pressure would get you long before any "surface".
 18. **What would happen if you held a spoonful of neutron star?** — what-if (#neutronstar) — One teaspoon weighs around a billion tonnes. It would punch straight through the Earth.
 
 ### Wildcard
