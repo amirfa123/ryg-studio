@@ -125,6 +125,11 @@ Shorts: **8:00, 11:00, 14:00, 17:00, 20:00, 22:00**. Long-form (every other day)
 - Split into chapter pages (one body per chapter, each ≤ ~40 s), render each to its own mp4, concat with the ffmpeg concat demuxer (`-c copy`), then mix the full voice + SFX. Use one voice generation for the whole script (or per chapter if > 5,000 chars).
 - Captions smaller and lower for 16:9. Thumbnail: render a still with big title text; pass via `videoThumbnailUrl` only if channel supports it, otherwise omit.
 
+## If ElevenLabs (or another service) is down
+- Don't give up on the first failure: retry the connection every ~5 minutes for up to ~45 minutes while preparing scenes/scripts in the meantime.
+- If it's still down, save prepared bodies in examples/ (as already done) and report clearly.
+- The NEXT run should first backfill any of today's empty slots that are still at least ~1 hour in the future (TikTok/IG/FB), using prepared bodies if available, before doing its own slots.
+
 ## Run summary
 End each run with a short message: what was made (titles + scheduled times), credits used/remaining, anything skipped and why. If something blocked the run (connector down, credits low, render failure), say exactly what and stop — never post a broken video.
 
