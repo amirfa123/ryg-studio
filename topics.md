@@ -24,7 +24,8 @@ Format: - Question (category) [date/slot]
 <!-- 2026-11-17: GTA car jump went to YouTube at 08:00 [YT]. Brain freeze + space skydive YouTube posts were moved back to drafts so the 10 AM run picks today's best 2 for 17:00/20:00. -->
 <!-- 2026-11-17 10 AM run: YouTube 17:00 slot = GTA download (16:57), 20:00 slot = space skydive (moved from draft, 20:06). Brain freeze YouTube post stays a draft. Day total on YouTube: 3. -->
 - What do you need to know before you play GTA 6? (long-form, pop culture / GTA 6) [scheduled 2026-11-18 18:00, YouTube video + Facebook]
-- What happens to your body if you stay up all night playing GTA 6? (body/everyday + GTA 6) [scheduled 2026-11-18 07:53]
+- What happens to your body if you stay up all night playing GTA 6? (body/everyday + GTA 6) [scheduled 2026-11-18 07:53] [YT 17:08]
 - Could you survive jumping off a skyscraper into the ocean like in GTA? (crazy what-if + GTA 6) [scheduled 2026-11-18 11:07] [YT]
-- How long would it take you to earn Elon Musk's money? (wildcard/money, owner idea) [scheduled 2026-11-18 13:56]
+- How long would it take you to earn Elon Musk's money? (wildcard/money, owner idea) [scheduled 2026-11-18 13:56] [YT 19:53]
 <!-- 2026-11-18 1 AM run: YouTube 11:07 = tower dive [YT]. Non-YouTube morning videos for the 10 AM run's pick: all-nighter, Elon money. Day still needs: 1 body, 1-2 what-if, 1 pop culture (2 GTA done already). -->
+<!-- 2026-11-18 10 AM run: ElevenLabs connector down the whole run (timeouts, then "Bad Request"), so NO new shorts were made. 17:00/20:00/22:00 slots on TikTok/IG/FB stay empty. YouTube best-2 from the morning's non-YT videos: all-nighter -> YouTube 17:08 [YT], Elon money -> YouTube 19:53 [YT]. Day total on YouTube: 3. Ready-to-voice bodies for fingers/sun/hunger games are in examples/shorts_1118b/ (topics NOT used yet). -->
