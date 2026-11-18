@@ -127,3 +127,9 @@ Shorts: **8:00, 11:00, 14:00, 17:00, 20:00, 22:00**. Long-form (every other day)
 
 ## Run summary
 End each run with a short message: what was made (titles + scheduled times), credits used/remaining, anything skipped and why. If something blocked the run (connector down, credits low, render failure), say exactly what and stop — never post a broken video.
+
+## Shorts helpers (added 2026-11-18)
+- `w_lib.js` = the long-form library (scene factory: `scene('room'|'city'|'keys'|'swamp'|'gym'|'stage')`, `putGuy`, `idle/walk/run/SIT`, props, 2D icons) — works for 9:16 too. Use `./w_sheet2.sh w_<slug> "t1,t2,..."` (concats w_lib.js + body.js) for contact sheets, and `./w_mix.sh w_<slug> <TT>` for the exact playbook mix + level check + first/last-frame check (writes verify.jpg). Bodies from this run: `examples/shorts_1118/`.
+- yrg3d mouths are only `smile`, `o`, `grin`, `teeth` (a `flat` mouth renders NO mouth — use `o` with `mouthSize:0.45`).
+- `Mix.save` peak-normalizes: one very loud hit (splash/thud/vineboom at gain ≥0.9) makes every other SFX too quiet. Keep big hits ≤0.5 so SFX mean lands ~16 dB under the voice.
+- 9:16 frames are narrow: frame wide establishing shots from the front 3/4 (e.g. room couch: cam `[3.1,2.5,-2.0]` look `[0,1.4,1.75]`), and look slightly ABOVE the character so he sits below the title/panels.
