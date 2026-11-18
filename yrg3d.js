@@ -42,8 +42,30 @@ export function makeYRG(){
     grin:part(h,new THREE.CircleGeometry(0.075,24,Math.PI,Math.PI),mo,[0,-0.14,0.236],[1,0.9,1],[-0.2,0,0],0)};part(mouths.grin,new THREE.CircleGeometry(0.066,24,Math.PI,Math.PI),wh,[0,-0.003,0.002],[1,0.3,1],[0,0,0],0);
   const tg=new THREE.Group();tg.position.set(0,-0.172,0.236);tg.rotation.x=-0.2;h.add(tg);mouths.teeth=tg;part(tg,new THREE.CircleGeometry(1,24),dk,[0,0,0],[0.082,0.052,1],[0,0,0],0);part(tg,new THREE.CircleGeometry(1,24),mo,[0,0,0.001],[0.074,0.044,1],[0,0,0],0);
   const tU=part(tg,new THREE.PlaneGeometry(0.11,0.03),wh,[0,0.016,0.002],[1,1,1],[0,0,0],0),tL=part(tg,new THREE.PlaneGeometry(0.1,0.028),wh,[0,-0.016,0.002],[1,1,1],[0,0,0],0);for(const x of [-0.028,0,0.028]){part(tU,new THREE.PlaneGeometry(0.004,0.03),dk,[x,0,0.001],[1,1,1],[0,0,0],0);part(tL,new THREE.PlaneGeometry(0.004,0.028),dk,[x,0,0.001],[1,1,1],[0,0,0],0)}
+
+  // ---------- OUTFITS / ACCESSORIES (toggle with api.outfit({...})) ----------
+  const acc={};const HG=(n)=>{const g2=new THREE.Group();g2.visible=false;acc[n]=g2;return g2};
+  const capCol=toon(0x1B1B1F),capCol2=toon(0xE23B3B),gold=toon(0xFFC531),blk=basic(0x111111),lens=toon(0x1A1A24),wool=toon(0xE24B4B),hard=toon(0xFFB000),chef=toon(0xFFFFFF),purp=toon(0x7C4DFF),grn=toon(0x2ECC71);
+  {const c=HG('snapback');h.add(c);const dome=new THREE.SphereGeometry(1,32,16,0,Math.PI*2,0,Math.PI/2);
+    c.userData.mats=[part(c,dome,capCol,[0,0.07,-0.01],[0.3,0.25,0.3],[-0.12,0,0],0.012)];
+    c.userData.mats.push(part(c,new THREE.CylinderGeometry(1,1,1,28,1,false,0,Math.PI),capCol2,[0,0.075,-0.26],[0.22,0.03,0.19],[0.25,Math.PI/2,0],0.01));
+    part(c,SPH,capCol2,[0,0.32,-0.04],[0.035,0.02,0.035],[0,0,0],0.006);part(c,cap(0.008,0.18),capCol2,[0,0.13,0.27],[1,1,1],[0,0,Math.PI/2],0)}
+  {const c=HG('snapforward');h.add(c);const dome=new THREE.SphereGeometry(1,32,16,0,Math.PI*2,0,Math.PI/2);
+    part(c,dome,capCol,[0,0.07,0.0],[0.3,0.25,0.3],[0.1,0,0],0.012);part(c,new THREE.CylinderGeometry(1,1,1,28,1,false,0,Math.PI),capCol2,[0,0.12,0.26],[0.22,0.03,0.19],[-0.25,-Math.PI/2,0],0.01);part(c,SPH,capCol2,[0,0.32,0.02],[0.035,0.02,0.035],[0,0,0],0.006)}
+  {const c=HG('beanie');h.add(c);part(c,new THREE.SphereGeometry(1,32,16,0,Math.PI*2,0,Math.PI/2),wool,[0,0.08,-0.01],[0.3,0.3,0.3],[-0.1,0,0],0.012);part(c,new THREE.TorusGeometry(0.29,0.04,10,32),wool,[0,0.09,-0.01],[1,1,0.95],[Math.PI/2-0.1,0,0],0.01);part(c,SPH,toon(0xffffff),[0,0.4,-0.04],[0.06,0.06,0.06],[0,0,0],0.008)}
+  {const c=HG('shades');h.add(c);for(const s2 of [-1,1]){part(c,SPH,lens,[s2*0.105,0.045,0.262],[0.085,0.07,0.02],[0,s2*0.2,0],0.006)}part(c,cap(0.01,0.06),blk,[0,0.06,0.272],[1,1,1],[0,0,Math.PI/2],0)}
+  {const c=HG('headphones');h.add(c);part(c,new THREE.TorusGeometry(0.3,0.022,10,32,Math.PI),purp,[0,0.02,-0.02],[1,1.05,1],[0,0,0],0.008);for(const s2 of [-1,1])part(c,SPH,purp,[s2*0.29,-0.01,0],[0.06,0.09,0.08],[0,0,0],0.008)}
+  {const c=HG('hardhat');h.add(c);part(c,new THREE.SphereGeometry(1,32,16,0,Math.PI*2,0,Math.PI/2),hard,[0,0.1,-0.01],[0.31,0.26,0.31],[0,0,0],0.012);part(c,new THREE.CylinderGeometry(0.37,0.37,0.025,32),hard,[0,0.1,0.01],[1,1,1],[0,0,0],0.01)}
+  {const c=HG('chefhat');h.add(c);part(c,new THREE.CylinderGeometry(0.25,0.27,0.16,28),chef,[0,0.3,-0.02],[1,1,1],[-0.08,0,0],0.01);for(const [x,z] of [[-0.12,0],[0.12,0],[0,-0.08],[0,0.09]])part(c,SPH,chef,[x,0.44,z-0.02],[0.15,0.13,0.15],[0,0,0],0.01)}
+  {const c=HG('crown');h.add(c);part(c,new THREE.CylinderGeometry(0.22,0.24,0.12,20,1,true),gold,[0,0.25,-0.02],[1,1,1],[0,0,0],0.008);for(let i=0;i<6;i++){const a2=i/6*Math.PI*2;part(c,new THREE.ConeGeometry(0.035,0.09,6),gold,[Math.sin(a2)*0.22,0.35,Math.cos(a2)*0.22-0.02],[1,1,1],[0,0,0],0.006)}}
+  {const c=HG('chain');up.add(c);const surf=(x,y)=>{let z=0;for(const [cy,rx,ry,rz,cz] of [[1.08,0.53,0.4,0.48,0.03],[1.34,0.46,0.27,0.37,0]]){const q=1-(x/rx)**2-((y-cy)/ry)**2;if(q>0)z=Math.max(z,cz+rz*Math.sqrt(q))}return z};
+    for(let i=0;i<=28;i++){const t=i/28,a2=(t-0.5)*Math.PI;const x=Math.sin(a2)*0.2,y=1.2+0.33*Math.abs(Math.sin(a2))**0.8;part(c,SPH,gold,[x,y,surf(x,y)+0.012],[0.022,0.022,0.022],[0,0,0],0)}
+    const pz=surf(0,1.13)+0.02;part(c,new THREE.CylinderGeometry(0.075,0.075,0.03,20),gold,[0,1.12,pz],[1,1,1],[Math.PI/2-0.35,0,0],0.006);part(c,SPH,toon(0xffffff),[0,1.125,pz+0.017],[0.03,0.03,0.006],[0,0,0],0)}
+  {const c=HG('bandana');h.add(c);part(c,new THREE.TorusGeometry(0.285,0.035,10,32),capCol2,[0,0.16,-0.01],[1,1,1],[Math.PI/2-0.15,0,0],0.008);part(c,SPH,capCol2,[0,0.14,-0.3],[0.05,0.035,0.05],[0,0,0],0.006)}
+  function outfit(o={}){const want=new Set();for(const k in o)if(o[k])want.add(k);for(const k in acc)acc[k].visible=want.has(k);
+    if(o.capColor!==undefined)acc.snapback.userData.mats[0].material=toon(o.capColor);}
   const UP=new THREE.Vector3(0,1,0);
-  const api={root,up,arms,legs,head:h,belly,
+  const api={root,up,arms,legs,head:h,belly,outfit,accessories:acc,
     pose(o={}){const m=o.mouth||'smile';for(const k in mouths)mouths[k].visible=(k===m);if(m==='teeth'){const gp=(o.teethGap||0);tU.position.y=0.014+gp*0.006;tL.position.y=-0.014-gp*0.012}if(m==='o')mouths.o.scale.set(0.04,0.05*(o.mouthSize||1),0.02);
       for(const {e,pu} of eyes){e.children[0].scale.y=o.blink?0.006:0.06;pu.visible=!o.blink;pu.position.x=(o.look||0)*0.018;pu.position.y=(o.lookY||0)*0.018;pu.scale.setScalar(1);pu.scale.set(o.wide?0.018:0.024,o.wide?0.018:0.024,0.008)}
       brows.forEach(b=>b.position.y=0.165+(o.brow||0)+(o.wide?0.035:0));

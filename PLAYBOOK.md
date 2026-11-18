@@ -42,6 +42,12 @@ Log the category next to each topic in `topics.md`.
 - Every short needs **4–6 scene changes** (new camera, location or diagram roughly every 3–4 s), the character doing something physical in most of them, and at least one clear "wow" visual moment.
 - Prefer real staging over awkward poses: put things on tables, have him sit/stand/walk/fall/run, use IK reaches for contact. If a shot looks awkward in the stills check, restage it rather than ship it.
 
+## Outfits (match the video's vibe — owner loves this)
+`guy.outfit({...})` toggles accessories (call once after makeYRG). Available: `snapback` (worn BACKWARDS, black/red; `capColor:0xRRGGBB` to recolor), `snapforward`, `beanie`, `shades` (sunglasses over his glasses), `headphones`, `hardhat`, `chefhat`, `crown`, `chain` (gold chain + medallion), `bandana`. Combine freely, e.g. GTA/street/money videos: `{snapback:1,chain:1,shades:1}`; cold/winter: `{beanie:1}`; gaming: `{headphones:1}`; food: `{chefhat:1}`; rich/king: `{crown:1,chain:1}`; building/science: `{hardhat:1}`. Use an outfit in most videos where it fits; plain look is fine for body/biology topics. Tracksuit, yellow skin, glasses and mustache NEVER change. New accessories can be added to yrg3d.js (keep them original and well-fitted; check a side view).
+
+## Meme sound effects (owner wants more!)
+sfxlib now has original synthesized meme-style SFX: `vineboom()` (dramatic reveal/punchline), `recordscratch()` ("wait, what?"), `airhorn()` (hype), `sadtrombone()` (fail), `bonk()`, `chaching()` (money), `dundun()` (dramatic sting), `boing()`, `slidewhistle(up=True)`, `honk()`, `ooh()` (crowd reaction), `bruhnote()` (deadpan). Use 2–4 per short on the funniest beats (e.g. vineboom on the big fact, chaching on money numbers, recordscratch before a twist), on top of the regular SFX. Same rule: never louder than the narrator. Don't use real copyrighted meme audio clips.
+
 ## Hard rules for every short
 1. **Open with a question** (narration line 1 + big title text on screen for ~3 s). Styles vary: "What happens when…", "Why do you…", "What would happen if…".
 2. **Instant loop**: no "follow for more". Narration ends with **"Which makes you wonder..."** and the last frame must match the first frame (camera, pose, scene) so it loops into the opening question. Periodic motions in the opening must use `t-TT` in the final segment.
