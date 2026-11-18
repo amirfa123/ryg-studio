@@ -23,3 +23,4 @@ Format: - Question (category) [date/slot]
 
 <!-- 2026-11-17: GTA car jump went to YouTube at 08:00 [YT]. Brain freeze + space skydive YouTube posts were moved back to drafts so the 10 AM run picks today's best 2 for 17:00/20:00. -->
 <!-- 2026-11-17 10 AM run: YouTube 17:00 slot = GTA download (16:57), 20:00 slot = space skydive (moved from draft, 20:06). Brain freeze YouTube post stays a draft. Day total on YouTube: 3. -->
+- What do you need to know before you play GTA 6? (long-form, pop culture / GTA 6) [scheduled 2026-11-18 18:00, YouTube video + Facebook]

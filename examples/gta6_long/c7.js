@@ -1,0 +1,27 @@
+// ===== Chapter 7: money (global 176.2 - 205.4) =====
+const T0=176.2,TT=29.2;
+function atmScreen(C,l1,l2,col='#3FF0FF'){const c=C.atmScr.ctx;c.fillStyle='#0E1A2E';c.fillRect(0,0,256,192);c.fillStyle=col;c.fillRect(0,0,256,34);c.font='900 26px Inter';c.textAlign='center';c.fillStyle='#111';c.fillText('BANK',128,26);c.fillStyle='#fff';c.font='900 30px Inter';c.fillText(l1,128,92);c.fillStyle=col;c.font='900 34px Inter';c.fillText(l2,128,145);C.atmScr.tx.needsUpdate=true}
+function bills(t,t0,cx,cy,n=24){const d=t-t0;if(d<0||d>2)return;for(let i=0;i<n;i++){const a=-PI/2+(hash(i*3.1)-0.5)*2.4,sp=500+hash(i)*700;const x=cx+Math.cos(a)*sp*d,y=cy+Math.sin(a)*sp*d+900*d*d;g.save();g.translate(x,y);g.rotate(d*6*(hash(i*7)-0.5)*3);g.fillStyle='#5BC26A';g.strokeStyle='#111';g.lineWidth=4;g.fillRect(-36,-18,72,36);g.strokeRect(-36,-18,72,36);g.fillStyle='#2E7D3A';g.beginPath();g.arc(0,0,10,0,7);g.fill();g.restore()}}
+window.render=function(tl){const t=tl;g.clearRect(0,0,W,H);hideProps();guy.outfit({snapback:1,chain:1,shades:1});
+  if(t<4.4){const C=scene('city');C.mood('day');C.cop.c.visible=false;C.car.c.position.set(-3,0,-1.2);C.car.c.rotation.y=0;C.car.color(0xFF3D7F);C.car.spin(0);atmScreen(C,'WELCOME','INSERT CASH');
+    putGuy(C.S,6.2,0.18,-3.4,-0.15);props.cash.visible=true;props.cash.position.set(0.05,1.12,0.6);const fl=Math.sin(t*7);guy.pose(idle(t,{reachL:[0.16,1.14,0.58],reachR:[-0.14+0.05*fl,1.18+0.04*fl,0.62],mouth:'grin',headPitch:0.2,lookY:-0.6}));
+    C.shot([4.5,2.0,5.8],[6.6,1.4,-3.4]);chapterCard(t,0.05,4.3,6,'LET\'S TALK MONEY');comic('CHA-CHING!',W*0.72,H*0.3,90,t,1.4,{life:1.2,rot:0.08,fill:'#5BE37A'});flash(t,0,0.2)}
+  else if(t<9.5){clear3d();setBG('neon');panel(W/2,H*0.32,820,250);txt('IN YOUR POCKET',W/2,H*0.25,44,{stroke:0,fill:'#FFD23F'});txt('$12,450',W/2,H*0.36,130,{sw:20});
+    const btn=(s,x,tk,col)=>{if(t<tk)return;const a=pop(t,tk);g.save();g.translate(x,H*0.66);g.scale(a,a);g.fillStyle=col;g.strokeStyle='#111';g.lineWidth=9;rr(-230,-75,460,150,30);g.fill();g.stroke();g.restore();if(a>0.5)txt(s,x,H*0.66+4,72,{sw:14})};
+    btn('BUSTED',W*0.32,6.6,'#2A6BFF');btn('WASTED',W*0.68,7.4,'#E23B3B');if(t>8.0){const s=1+0.08*Math.sin(t*10);txt('?',W/2,H*0.66,150*s,{fill:'#FFD23F',sw:24})}flash(t,4.4,0.2)}
+  else if(t<11.7){clear3d();setBG('red');const k=easeOut(seg(t,9.55,10.4));panel(W/2,H*0.32,820,250);txt('IN YOUR POCKET',W/2,H*0.25,44,{stroke:0,fill:'#FFD23F'});txt(moneyStr(12450*(1-k)),W/2,H*0.36,130,{sw:20,fill:k>=1?'#FF4A4A':'#fff'});
+    bills(t,9.55,W/2,H*0.4,30);comic('GONE.',W/2,H*0.68,170,t,9.8,{life:1.9,rot:-0.05,fill:'#FF4A4A'});pill('ALL OF IT',W/2,H*0.86,46,'#fff','#111',t,10.7,11.65);flash(t,9.5,0.2)}
+  else if(t<15.9){const C=scene('city');C.mood('day');C.cop.c.visible=false;C.car.c.position.set(-3,0,-1.2);const dep=t>13.4;const k=easeOut(seg(t,13.4,14.6));atmScreen(C,dep?'BALANCE':'DEPOSIT?',dep?moneyStr(12450*k):'$12,450',dep?'#5BE37A':'#3FF0FF');
+    putGuy(C.S,9.5,0.18,-3.55,PI-0.55);props.cash.visible=!dep;props.cash.position.set(0.05,1.25,0.75);guy.pose(idle(t,{reachL:dep?undefined:[0.12,1.25,0.72],reachR:dep?undefined:[-0.12,1.25,0.74],armL:dep?[0.4,0]:[0.3,0],armR:dep?[0.4,0]:[0.3,0],mouth:'smile'}));
+    C.shot([12.9,2.2,-1.0],[9.9,1.5,-4.3]);pill('DEPOSIT AT AN ATM',W/2,110,56,'#5BE37A','#111',t,11.8,15.85);if(dep)comic('SAFE!',W*0.78,H*0.4,110,t,14.6,{life:1.2,rot:0.08,fill:'#5BE37A'});flash(t,11.7,0.2)}
+  else if(t<19.5){clear3d();setBG('blue');g.save();g.translate(W/2,H*0.47);g.fillStyle='#1B1240';g.strokeStyle='#FFD23F';g.lineWidth=8;rr(-560,-260,1120,520,30);g.fill();g.stroke();g.restore();
+    txt('STORY MISSION',W/2,H*0.27,64,{fill:'#fff',sw:12});const sh=t>16.8&&t<17.4?Math.sin(t*60)*10:0;lockIcon(W*0.32+sh,H*0.52,1.5);txt('LOCKED',W*0.32,H*0.65,50,{fill:'#FF4A4A',sw:10});
+    txt('NEED MORE CASH',W*0.63,H*0.43,50,{sw:10});bar(W*0.63-250,H*0.5,500,64,0.15+0.4*easeOut(seg(t,16.2,19.0)),'#5BE37A');txt('$$$',W*0.63,H*0.62,70,{fill:'#5BE37A',sw:14});flash(t,15.9,0.2)}
+  else if(t<25.5){const S=scene('stage');stageOnly();setBG('gold');guy.outfit({crown:1,chain:1,shades:1});putGuy(S.S,-2.6,0,0,0.3);const up=t>23.0;guy.pose(idle(t,{mouth:up?'grin':'smile',armL:[up?2.5:0.3,0],armR:[up?2.5:0.3,0],bendL:up?0.4:0,bendR:up?0.4:0,jump:up&&t<23.6?0.2*Math.sin(seg(t,23.0,23.6)*PI):0.012*Math.sin(t*2.4)}));S.shot([0,1.3,9.5],[0,1.1,0]);
+    for(let i=0;i<20;i++){const ph=(t*0.4+hash(i))%1;g.fillStyle=`rgba(255,230,120,${0.6*(1-ph)})`;g.beginPath();g.arc(hash(i*3)*W,H*(1-ph),6+hash(i*2)*6,0,7);g.fill()}
+    txt('THE GOLDEN RULE',W*0.6,H*0.2,90*pop(t,19.7),{fill:'#FFD23F',sw:20});
+    if(t>23.0){const a=pop(t,23.0,0.25);g.save();g.translate(W*0.6,H*0.5);g.rotate(-0.08);g.scale(1.5-0.5*a,1.5-0.5*a);g.fillStyle='#5BE37A';g.strokeStyle='#111';g.lineWidth=12;rr(-300,-100,600,200,30);g.fill();g.stroke();g.restore();txtA('BANK IT.',W*0.6,H*0.5,120,clamp(a),{sw:22})}
+    pill('EARLY, AND OFTEN',W*0.6,H*0.76,56,'#fff','#111',t,23.9,25.45);flash(t,19.5,0.2)}
+  else{const C=scene('city');C.mood('day');C.cop.c.visible=false;C.car.c.position.set(-3,0,-1.2);atmScreen(C,'PROGRESS','SAVED ✓','#5BE37A');putGuy(C.S,8.6,0.18,-3.3,0.4);guy.pose(idle(t,{mouth:'grin',armR:[0.3+1.6*easeOut(seg(t,25.6,26.0)),0],bendR:0.5}));
+    C.shot([9.0,2.0,4.6],[9.6,1.5,-4]);const p=proj(new THREE.Vector3(10,2.6,-4.6),C.cam);if(t>26.0)check(p[0],p[1]-90,1.8*pop(t,26.0));pill('ATM = SAVE POINT',W/2,110,60,'#FFD23F','#111',t,25.7,29.15);flash(t,25.5,0.2)}
+  vignette();cap16(t+T0)};
