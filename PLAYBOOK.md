@@ -23,6 +23,17 @@ The owner wants GTA 6 as a main spotlight — it's huge with the audience.
 - **Visuals (no tacky stuff):** sleek original sports cars driving down neon, palm-lined Miami-style streets at sunset, beaches, money stacks on tables, cash-counter overlays climbing to $1,000,000, police lights, helicopters, Round Yellow Guy driving/running/diving — real staging, no floating props, no awkward holding poses.
 - **IP rules still apply:** you can SAY "GTA 6" in the question/captions/hashtags (#gta6, #gta). Do NOT draw Rockstar/GTA logos or title font, Jason/Lucia or any game characters, the real in-game map, copied HUD/wanted-star UI, or real car brands. Use original stand-ins.
 
+## 🔁 DAILY SERIES: "Day N of putting my followers in a single-file line around the world"
+Owner's growth series — runs every day from its own scheduled task. **One separate video per platform** (Instagram, Facebook, TikTok, YouTube) because each has a different follower count. Track the day number + counts in `series_line.md`.
+- **Counts:** Metricool getAnalyticsDataByMetrics (brandId 8164865), latest value of: Instagram `IGEV01`, Facebook `FBEV17`, TikTok `TKEV07`, YouTube `YTEV01` (query the last 7 days, take the most recent date).
+- **Math:** each person in line takes **about half a meter** (0.5 m). Line length = followers × 0.5 m. Earth's equator ≈ 40,075 km → it takes ~80 million people to circle the Earth. Show % of the way around.
+- **Comparison:** pick ONE fun, accurate real-world comparison for that platform's length (verify the length with a web search): e.g. ~23 m ≈ a tennis court, ~93 m ≈ an American football field, ~13 km ≈ more than half of Manhattan's length, ~31 km ≈ ¾ of a marathon. Change comparisons as numbers grow; don't repeat the same one two days in a row.
+- **Script (~35–45 words, short to save credits):** "Day N of putting my followers in a single-file line around the world. There are [count] of you, which makes a line about [length] — that's [comparison]! We're only [x]% of the way around... Hit follow and keep the line growing!" (Platform-specific wording ok: "follow" on IG/TikTok/FB, "subscribe" on YouTube.) This series is the ONE exception to the no-call-to-action rule; it can still loop visually.
+- **Visual:** Round Yellow Guy at the front of a single-file line of tiny little yellow round figures stretching away (instanced, so thousands are cheap), a stylized globe with a glowing line showing progress, a big follower counter rolling up, a % progress bar, and the comparison object drawn in simple original style. Outfit: different each day for fun. Meme SFX allowed (airhorn on the count, vineboom on the comparison).
+- **Same visuals for all 4, only the numbers/comparison change**: build once, swap numbers per platform, render 4 times; 4 voice lines (one ElevenLabs generation each).
+- **Captions:** `Day N of putting my followers in a single-file line around the world 🌍 #trending #funfact #viral #<platformtag> #followers` (platform tag: #reels for IG+FB, #fyp TikTok, #shorts YouTube). YouTube title ≤ 100 chars: `Day N: putting my subscribers in a line around the world #shorts #funfact`.
+- **Posting:** ~12:30 PM ET daily (jittered). Instagram and Facebook are SEPARATE posts here (different videos). The YouTube one counts as one of YouTube's 3 shorts per day.
+
 ## Topic mix (rotate every day — never 6 of the same kind)
 Every short still OPENS WITH A QUESTION and loops. Per day of 6, aim for roughly:
 - **2 × body / everyday "what happens / why"** — e.g. "What happens when you crack your knuckles?", "Why do you yawn?", "What happens if you hold in a sneeze?"
@@ -100,7 +111,7 @@ Owner's decision: do NOT apply AI-content labels anywhere. Always send isAiGener
 ## YouTube: only the BEST 3 shorts per day (trust-building phase)
 TikTok, Instagram and Facebook get all 6 shorts. **YouTube gets only 3 per day** (long-form is separate and doesn't count).
 - **~1 AM run:** schedule IG+FB and TikTok for all 3 videos as usual. Pick the **single best** of its 3 for YouTube and schedule it at ~11:00 (jittered).
-- **~10 AM run:** schedule IG+FB and TikTok for its 3. Then pick the **best 2** from: its own 3 + the morning run's 2 videos that did NOT go to YouTube (their files are in ryg-videos/shorts/ dated today; topics.md says which went to YouTube). Schedule them on YouTube at ~17:00 and ~20:00 (jittered).
+- **~10 AM run:** schedule IG+FB and TikTok for its 3. Then pick the **best 1** from: its own 3 + the morning run's 2 videos that did NOT go to YouTube (their files are in ryg-videos/shorts/ dated today; topics.md says which went to YouTube). Schedule it on YouTube at ~19:00 (jittered). (The daily follower-line series video is YouTube's third short of the day at ~12:30.)
 - **"Best" =** (1) early performance: for morning videos already live on TikTok/Instagram, check Metricool analytics (views, likes, shares, watch time) and favor the strongest; (2) animation quality from your stills check (cleanest, most visually impressive, no awkward shots); (3) strongest hook / most trending topic (GTA 6 during the spotlight).
 - Before scheduling, count today's YouTube shorts in getScheduledPosts + already published; never exceed 3 per day.
 - Log in topics.md which videos went to YouTube (mark `[YT]`).
