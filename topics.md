@@ -34,3 +34,7 @@ Format: - Question (category) [date/slot]
 - What happens to your brain when you finally play a game you've waited 13 years for? (body/everyday + GTA 6) [scheduled 2026-11-19 14:03]
 <!-- 2026-11-19 1 AM run: ElevenLabs was disconnected at first; owner reconnected it at ~01:10 and all 3 shorts were made on time. YouTube 11:03 = ramp jump [YT]. Non-YouTube morning videos for the 10 AM run's pick: sinking car, waiting brain. Day still needs: 1 body/everyday (non-GTA ok), 1 what-if, 1 pop culture/wildcard. 3 GTA done (launch-day quota met). Unused prepared bodies: examples/shorts_1118b (fingers, sun, hunger games). -->
 - Could you survive real-life GTA stunts? (long-form, pop culture / GTA 6) [scheduled 2026-11-19 18:00, YouTube video + Facebook]
+- Why do your fingers wrinkle in water? (body/everyday) [scheduled 2026-11-19 17:07]
+- How long could you actually survive in the Hunger Games? (pop culture) [scheduled 2026-11-19 19:54]
+- What would happen if the Sun suddenly disappeared? (crazy what-if) [scheduled 2026-11-19 21:56] [YT 18:53]
+<!-- 2026-11-19 10 AM run: used the prepared bodies from examples/shorts_1118b (fingers, hunger, sun). YouTube best-1 = Sun (no early Metricool data yet for the morning videos; picked for the most varied animation + journey-style what-if, and to avoid a second car-based GTA short on YouTube next to the ramp jump). Day total on YouTube shorts: 3 (ramp 11:03, follower line 12:27, sun 18:53). -->

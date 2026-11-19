@@ -41,7 +41,7 @@ Format: question — category — science hook.
 1. ✅ **What would happen if you jumped out of a moving car like in GTA?** — pop culture (#gta6) — At 100 km/h you keep going at 28 m/s; hitting the road is like falling off a 13-storey building.
 2. **Could Godzilla actually exist?** — pop culture (#godzilla) — Scale a lizard up 50× and it gets 125,000× heavier, but its bones only get 2,500× stronger. Its legs snap. Stand-in: a generic green giant lizard, no spines that copy the design.
 3. **What would happen if you got hit by a Haaland shot?** — pop culture (#haaland) — A ~120 km/h ball stops in about a hundredth of a second, briefly pushing with the force of a ~140 kg weight. Plain red kit, no crest.
-4. **How long could you actually survive in the Hunger Games?** — pop culture (#hungergames) — Rule of threes: ~3 minutes without air, ~3 days without water, ~3 weeks without food. Water is what gets you.
+4.  ✅ **How long could you actually survive in the Hunger Games?** — pop culture (#hungergames) — Rule of threes: ~3 minutes without air, ~3 days without water, ~3 weeks without food. Water is what gets you.
 5. **What would happen if you got a cyberpunk robot arm?** — pop culture (#cyberpunk) — The arm could lift a car, but your spine and shoulder are still human. Your own skeleton is the weak link.
 6. **How high do you have to jump to dunk over four people?** — pop culture (#nba) — Hang time: a 1 m vertical leap gives under a second in the air (t = 2√(2h/g) ≈ 0.9 s). Unnamed player, plain jersey.
 7. ✅ **How long would GTA 6 take to download on bad Wi-Fi?** — pop culture (#gta6) — 200+ GB is 1,600 gigabits: about 9 hours at 50 Mbps, and over 2 weeks at 1 Mbps.
@@ -50,14 +50,14 @@ Format: question — category — science hook.
 8. ✅ **What happens to your body when you get really mad?** — body (#anger, rides the "I Got So Mad" trend) — Adrenaline: heart rate spikes, blood rushes to muscles, your face flushes, and digestion pauses.
 9. **Why do you get so sleepy after Thanksgiving dinner?** — body (#thanksgiving) — It's not really the turkey's tryptophan. A huge meal sends blood and energy to your gut, and your body flips into "rest and digest".
 10. ✅ **Why do you get brain freeze?** — body (#brainfreeze) — Cold hits the roof of your mouth, blood vessels rapidly widen, and a nerve in your face reports it as a headache.
-11. **Why do your fingers wrinkle in water?** — body (#fingers) — It's your nervous system shrinking blood vessels on purpose (probably for grip). Fingers with cut nerves don't wrinkle.
+11. ✅. **Why do your fingers wrinkle in water?** — body (#fingers) — It's your nervous system shrinking blood vessels on purpose (probably for grip). Fingers with cut nerves don't wrinkle.
 12. **Why do you hiccup?** — body (#hiccups) — Your diaphragm spasms, and your vocal cords snap shut a split second later. That snap is the "hic".
 13. **Why do your ears pop on a plane?** — body (#ears) — Air pressure changes and a tiny tube behind your nose opens to even it out. Pop.
 14. **Why does your foot fall asleep?** — body (#foot) — Pressure squeezes the nerves so signals stop. When the pressure lifts, the nerves restart with pins and needles.
 
 ### Crazy "what would happen if…"
 15. ✅ **What would happen if you skydived from the edge of space?** — what-if (#space) — From ~39 km up there's so little air that a falling person can break the sound barrier (record ~1,357 km/h). Same journey format as fall-through-Earth.
-16. **What would happen if the Sun suddenly disappeared?** — what-if (#sun) — You wouldn't know for 8 min 20 s: light and gravity both take that long to reach us.
+16. ✅. **What would happen if the Sun suddenly disappeared?** — what-if (#sun) — You wouldn't know for 8 min 20 s: light and gravity both take that long to reach us.
 17. ✅ **What would happen if you tried to stand on Jupiter?** — what-if (#jupiter) — There's no ground. You'd sink through thickening gas, and the crushing pressure would get you long before any "surface".
 18. **What would happen if you held a spoonful of neutron star?** — what-if (#neutronstar) — One teaspoon weighs around a billion tonnes. It would punch straight through the Earth.
 
