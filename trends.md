@@ -87,7 +87,7 @@ Format: question — category — science hook.
   6. Air thickening and slowing you down.
   7. The parachute.
   8. Landing.
-- **C. Could you survive real-life GTA stunts?** (rides GTA 6 launch week) Non-violent stunts only:
+- ✅ **C. Could you survive real-life GTA stunts?** (made 2026-11-19 long-form) (rides GTA 6 launch week) Non-violent stunts only:
   1. Car jumps.
   2. Falling off a roof.
   3. Bailing out of a car at speed.

@@ -33,3 +33,4 @@ Format: - Question (category) [date/slot]
 - How far could a real car jump off a ramp like in GTA? (crazy what-if + GTA 6) [scheduled 2026-11-19 11:03] [YT]
 - What happens to your brain when you finally play a game you've waited 13 years for? (body/everyday + GTA 6) [scheduled 2026-11-19 14:03]
 <!-- 2026-11-19 1 AM run: ElevenLabs was disconnected at first; owner reconnected it at ~01:10 and all 3 shorts were made on time. YouTube 11:03 = ramp jump [YT]. Non-YouTube morning videos for the 10 AM run's pick: sinking car, waiting brain. Day still needs: 1 body/everyday (non-GTA ok), 1 what-if, 1 pop culture/wildcard. 3 GTA done (launch-day quota met). Unused prepared bodies: examples/shorts_1118b (fingers, sun, hunger games). -->
+- Could you survive real-life GTA stunts? (long-form, pop culture / GTA 6) [scheduled 2026-11-19 18:00, YouTube video + Facebook]
