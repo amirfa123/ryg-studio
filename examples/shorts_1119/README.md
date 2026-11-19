@@ -1,7 +1,5 @@
-# Nov 19 (GTA 6 launch day) — prepared short scripts, NOT voiced
-
-The Nov 19 1 AM run could not voice anything: both ElevenLabs connectors show "connect incomplete" (the owner must reconnect ElevenLabs in claude.ai connector settings). Retrying does not help with a sign-in problem.
-Scripts below are fact-checked and ready for Russ / eleven_v4. Launch day needs 3 GTA shorts, so these three are all GTA. Bodies are not written yet; build them after voicing, using word timings (w_lib.js scenes + examples/shorts_1118/tower_dive.js as a base). None are in topics.md yet.
+# Nov 19 (GTA 6 launch day) shorts — made and scheduled by the 1 AM run
+Bodies: sink.js, ramp.js, brain.js (use with w_lib.js via w_sheet2.sh). SFX: w_sfx_1119.py. Scripts and facts below.
 
 ## 1. sinking car — crazy what-if + GTA 6 — #gta6
 **Could you escape a sinking car like in GTA?**

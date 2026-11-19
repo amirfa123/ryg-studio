@@ -46,7 +46,7 @@ function sunDisk(x,y,R){const gr=g.createLinearGradient(0,y-R,0,y+R);gr.addColor
 // ---------- the guy ----------
 const guy=makeYRG();guy.outfit({snapback:1,chain:1,shades:1});
 const holder=new THREE.Group();holder.add(guy.root);
-function putGuy(sc,x,y,z,ry=0,s=1){sc.add(holder);holder.position.set(x,y,z);holder.rotation.set(0,ry,0);holder.scale.setScalar(s)}
+function putGuy(sc,x,y,z,ry=0,s=1){sc.add(holder);holder.rotation.order='XYZ';holder.position.set(x,y,z);holder.rotation.set(0,ry,0);holder.scale.setScalar(s)}
 const idle=(t,o={})=>({armL:[0.3+0.03*Math.sin(t*2),0],armR:[0.3+0.03*Math.sin(t*2+1),0],blink:BLINK(t),mouth:'smile',jump:0.012*Math.sin(t*2.4),...o});
 function walk(t,sp=7,o={}){const s=Math.sin(t*sp);return {legL:[0.5*s,0.5*Math.max(0,-s),0],legR:[-0.5*s,0.5*Math.max(0,s),0],armL:[0.25,-0.5*s],armR:[0.25,0.5*s],jump:0.05*Math.abs(Math.cos(t*sp)),blink:BLINK(t),mouth:'smile',...o}}
 function run(t,o={}){const s=Math.sin(t*12);return {legL:[0.9*s,0.9*Math.max(0,-s)+0.2,0],legR:[-0.9*s,0.9*Math.max(0,s)+0.2,0],armL:[0.35,-0.9*s],armR:[0.35,0.9*s],bendL:1.0,bendR:1.0,jump:0.12*Math.abs(Math.cos(t*12)),mouth:'o',wide:true,...o}}
