@@ -11,3 +11,10 @@ Per platform `p` in ig, fb, tt, yt:
 4. Render: `node cap.js w_line_<p>/video.html video w_line_<p>/video.mp4 <ceil(TT*30)+2>` (2 CPUs → max 2 renders in parallel, ~3–4 min each).
 5. SFX: `python3 examples/series_line/sfx_line.py w_line_<p> <TT>` (cue times come from the words). Mix + check: `./w_mix.sh w_line_<p> <TT>`.
 Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "only <pct>", "And", "Hit" — keep the script template wording.
+
+## Added Day 2 (2026-11-20)
+- `cfg.js` now also takes `names:[...]` (that platform's roster from line_roster.json, join order). Name tags (white pills, 46px, collision-stacked) float over figures 1..n in S3 and S6; NAMES[0] gets the crown + "FRONT OF THE LINE". Empty list → dashed "@YOUR_NAME?" + "THE FRONT IS OPEN!".
+- Scene 6 now starts at the first word after "...of the way around." (welcome line / CTA), with a "COMMENT TO JOIN THE LINE!" pill on "Comment", then "HIT FOLLOW/SUBSCRIBE!" on "hit".
+- New comparisons: `everest` (vertical, cmpFrac = line/Everest), `pyramid` (vertical), `channel` (horizontal England→France), `whale` (horizontal). Leader face follows outfit (beanie/shades).
+- Script: never say "and" before the comparison ends (cue = first "and"); write "1.5"/"22.5" as digits, not "one and a half".
+- Word fix: a digit word followed by a word > 0.6 s gets its end moved to next.end-0.35 (TTS reads the number over the next word).

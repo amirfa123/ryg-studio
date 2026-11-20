@@ -1,2 +1,30 @@
-{"_note":"Commenters who joined the follower line. One list per platform, in join order. Append new unique handles each day (never remove unless offensive). Facebook not connected in Windsor yet.",
- "youtube":[], "instagram":[], "tiktok":[], "facebook":[]}
+{
+ "_note": "Commenters who joined the follower line. One list per platform, in join order. Append new unique handles each day (never remove unless offensive). Facebook not connected in Windsor yet.",
+ "youtube": [
+  "amirelates",
+  "HappyMealidk",
+  "robloxegor_C0b",
+  "AsaThaqi"
+ ],
+ "instagram": [
+  "amii.ne_op",
+  "cadenc3ee",
+  "iamalwaaz"
+ ],
+ "tiktok": [],
+ "facebook": [],
+ "_skipped": [
+  {
+   "platform": "instagram",
+   "handle": "incarnation_of_hatred",
+   "date": "2026-11-20",
+   "reason": "edgy word in handle - skipped per \"when unsure, skip\"; owner can add manually"
+  },
+  {
+   "platform": "tiktok",
+   "handle": "yellowroundguy",
+   "date": "2026-11-20",
+   "reason": "our own account"
+  }
+ ]
+}
