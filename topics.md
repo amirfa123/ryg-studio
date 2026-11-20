@@ -42,3 +42,7 @@ Format: - Question (category) [date/slot]
 - Could you outrun a police helicopter like in GTA? (crazy what-if + GTA 6) [scheduled 2026-11-20 10:53] [YT]
 - What would happen if you held a spoonful of neutron star? (crazy what-if) [scheduled 2026-11-20 14:06]
 <!-- 2026-11-20 1 AM run: YouTube 10:53 = police helicopter [YT] (GTA spotlight + strongest hook). Non-YouTube morning videos for the 10 AM run's pick: gamer's thumb, neutron spoon. Day still needs: 1 more GTA 6 short (3 GTA on the day after launch), 1 body/everyday, 1 pop culture or wildcard. Bodies: examples/shorts_1120/. -->
+- Why do you hiccup? (body/everyday) [scheduled 2026-11-20 16:53]
+- Would a real car explode like in GTA? (pop culture + GTA 6) [scheduled 2026-11-20 20:08] [YT 19:04]
+- How do cats always land on their feet? (wildcard/animals) [scheduled 2026-11-20 21:57]
+<!-- 2026-11-20 10 AM run: YouTube best-1 = car explode (GTA spotlight + strongest hook + clean diagrams; no early Metricool data yet for the morning's thumb/neutron videos). Day total on YouTube shorts: 3 (police heli 10:53, follower line 12:34, car explode 19:04). Bodies: examples/shorts_1120b/. -->
