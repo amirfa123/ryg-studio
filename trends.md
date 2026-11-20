@@ -59,7 +59,7 @@ Format: question — category — science hook.
 15. ✅ **What would happen if you skydived from the edge of space?** — what-if (#space) — From ~39 km up there's so little air that a falling person can break the sound barrier (record ~1,357 km/h). Same journey format as fall-through-Earth.
 16. ✅ **What would happen if the Sun suddenly disappeared?** — what-if (#sun) — You wouldn't know for 8 min 20 s: light and gravity both take that long to reach us.
 17. ✅ **What would happen if you tried to stand on Jupiter?** — what-if (#jupiter) — There's no ground. You'd sink through thickening gas, and the crushing pressure would get you long before any "surface".
-18. **What would happen if you held a spoonful of neutron star?** — what-if (#neutronstar) — One teaspoon weighs around a billion tonnes. It would punch straight through the Earth.
+18. ✅ **What would happen if you held a spoonful of neutron star?** — what-if (#neutronstar) — One teaspoon weighs around a billion tonnes. It would punch straight through the Earth.
 
 ### Wildcard
 19. **What happens when a shooting star hits the atmosphere?** — wildcard/space (#leonids, post this week) — Most Leonids are the size of a grain of sand. At ~71 km/s they vaporise ~100 km up, and that streak is glowing air.

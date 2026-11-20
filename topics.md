@@ -38,3 +38,7 @@ Format: - Question (category) [date/slot]
 - How long could you actually survive in the Hunger Games? (pop culture) [scheduled 2026-11-19 19:54]
 - What would happen if the Sun suddenly disappeared? (crazy what-if) [scheduled 2026-11-19 21:56] [YT 18:53]
 <!-- 2026-11-19 10 AM run: used the prepared bodies from examples/shorts_1118b (fingers, hunger, sun). YouTube best-1 = Sun (no early Metricool data yet for the morning videos; picked for the most varied animation + journey-style what-if, and to avoid a second car-based GTA short on YouTube next to the ramp jump). Day total on YouTube shorts: 3 (ramp 11:03, follower line 12:27, sun 18:53). -->
+- What happens to your thumbs after 10 hours of GTA 6? (body/everyday + GTA 6) [scheduled 2026-11-20 08:09]
+- Could you outrun a police helicopter like in GTA? (crazy what-if + GTA 6) [scheduled 2026-11-20 10:53] [YT]
+- What would happen if you held a spoonful of neutron star? (crazy what-if) [scheduled 2026-11-20 14:06]
+<!-- 2026-11-20 1 AM run: YouTube 10:53 = police helicopter [YT] (GTA spotlight + strongest hook). Non-YouTube morning videos for the 10 AM run's pick: gamer's thumb, neutron spoon. Day still needs: 1 more GTA 6 short (3 GTA on the day after launch), 1 body/everyday, 1 pop culture or wildcard. Bodies: examples/shorts_1120/. -->

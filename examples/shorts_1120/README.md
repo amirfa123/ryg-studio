@@ -1,0 +1,6 @@
+# Nov 20 (day after GTA 6 launch) shorts — 1 AM run
+Bodies use w_lib.js via w_sheet2.sh. SFX: w_sfx_1120.py.
+
+1. **What happens to your thumbs after 10 hours of GTA 6?** (body + GTA 6, #gta6) — 08:09. Facts: "gamer's thumb" = De Quervain's tenosynovitis; two thumb tendons run through a narrow tunnel (sheath) at the wrist; repetitive motion irritates/swells it → pain on thumb movement (ASSH, Connecticut Children's). Fix: breaks, stretches, rest.
+2. **Could you outrun a police helicopter like in GTA?** (what-if + GTA 6, #gta6) — 10:53 + YouTube [YT]. Facts: typical police helicopters (e.g. Airbus H125) cruise ~250 km/h; no roads/lights; gimbal zoom cameras track from a mile+; thermal cameras see body heat at night. New: original helicopter model (HELI) + overpass set in the keys scene at x=100,z=20.
+3. **What would happen if you held a spoonful of neutron star?** (what-if, #neutronstar) — 14:06. Facts: commonly cited ~1 billion tonnes per teaspoon (NASA/Astronomy; estimates vary); away from the star's gravity it would decompress explosively, releasing far more energy than any bomb (Astronomy.com Ask Astro). New: stage-scene space set (stars, asteroid, pulsar), spoon prop (mkProp 'spoon'), earth set.
