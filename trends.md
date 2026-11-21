@@ -52,7 +52,7 @@ Format: question — category — science hook.
 10. ✅ **Why do you get brain freeze?** — body (#brainfreeze) — Cold hits the roof of your mouth, blood vessels rapidly widen, and a nerve in your face reports it as a headache.
 11. ✅ **Why do your fingers wrinkle in water?** — body (#fingers) — It's your nervous system shrinking blood vessels on purpose (probably for grip). Fingers with cut nerves don't wrinkle.
 12. ✅ **Why do you hiccup?** — body (#hiccups) — Your diaphragm spasms, and your vocal cords snap shut a split second later. That snap is the "hic".
-13. **Why do your ears pop on a plane?** — body (#ears) — Air pressure changes and a tiny tube behind your nose opens to even it out. Pop.
+13. ✅ **Why do your ears pop on a plane?** — body (#ears) — Air pressure changes and a tiny tube behind your nose opens to even it out. Pop.
 14. **Why does your foot fall asleep?** — body (#foot) — Pressure squeezes the nerves so signals stop. When the pressure lifts, the nerves restart with pins and needles.
 
 ### Crazy "what would happen if…"

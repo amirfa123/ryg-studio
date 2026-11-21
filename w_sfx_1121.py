@@ -1,0 +1,63 @@
+import sys;sys.path.insert(0,'.')
+from sfxlib import *
+def thud():x=tt(0.4);return np.sin(2*np.pi*np.cumsum(90*np.exp(-x*6)+40)/SR)*env(0.4,0.002,9)*1.2+lp(nz(0.4),25)*env(0.4,0.002,20)
+def step():x=tt(0.12);return lp(nz(0.12),12)*env(0.12,0.002,40)*0.9
+def splash():d=0.5;x=tt(d);return lp(nz(d),2)*env(d,0.003,7)*0.9
+def snap():x=tt(0.25);return (np.sin(2*np.pi*np.cumsum(220*np.exp(-x*20)+80)/SR)*0.8+lp(nz(0.25),5)*0.5)*env(0.25,0.001,22)
+def clunk():x=tt(0.6);return (np.sin(2*np.pi*95*x)+0.6*np.sin(2*np.pi*143*x))*env(0.6,0.002,7)*0.8+lp(nz(0.6),6)*env(0.6,0.001,30)*0.6
+def creak(d=1.2):x=tt(d);f=180+60*np.sin(2*np.pi*1.3*x);return np.sign(np.sin(2*np.pi*np.cumsum(f)/SR))*0.12*np.minimum(1,x/0.1)*np.minimum(1,(d-x)/0.2)
+def jet(d):x=tt(d);return lp(nz(d),3)*0.6*np.minimum(1,x/0.5)*np.minimum(1,(d-x)/0.4)+np.sin(2*np.pi*np.cumsum(300+200*x/d)/SR)*0.08*np.minimum(1,x/0.5)*np.minimum(1,(d-x)/0.4)
+def tick():x=tt(0.05);return np.sin(2*np.pi*2000*x)*env(0.05,0.0005,120)*0.6
+which=sys.argv[1]
+if which=='gator':
+    m=Mix(21.2,41)
+    m.put(shimmer(),0.05,0.2);m.put(growl(0.9),1.0,0.3);m.put(bloop(0.8),2.0,0.25)
+    m.put(whoosh(0.5),3.15,0.45);m.put(splash(),3.25,0.35)
+    for k in range(5):m.put(splash(),3.6+k*0.4,0.18)
+    m.put(pop(650),3.4,0.35);m.put(snap(),4.35,0.4);m.put(recordscratch(),4.4,0.3);m.put(snap(),4.95,0.35)
+    m.put(whoosh(0.5),5.55,0.4);m.put(pop(700),6.05,0.35);m.put(slide(300,1100,0.6),6.6,0.25);m.put(whoosh(0.7),6.8,0.35);m.put(vineboom(),8.55,0.42);m.put(pop(800),9.8,0.35)
+    m.put(whoosh(0.5),11.15,0.4);m.put(pop(650),11.3,0.35)
+    for k in range(10):m.put(step(),11.4+k*0.27,0.3)
+    m.put(slide(200,900,1.4),11.7,0.2);m.put(pop(800),14.0,0.35);m.put(slidewhistle(False,0.7),14.3,0.25);m.put(bruhnote(),14.75,0.3)
+    m.put(whoosh(0.5),15.65,0.4);m.put(dundun(),15.8,0.3);m.put(slide(400,800,0.4),16.1,0.15);m.put(slide(800,400,0.4),16.5,0.15);m.put(slide(400,800,0.4),16.9,0.15);m.put(bonk(),17.35,0.35)
+    m.put(whoosh(0.5),18.05,0.4)
+    for k in range(5):m.put(step(),18.15+k*0.25,0.3)
+    m.put(pop(700),18.2,0.35);m.put(boing(),18.6,0.25)
+    m.put(whoosh(0.6),19.45,0.4);m.put(growl(0.9),20.1,0.2)
+    m.save('w_gator/sfx.wav')
+if which=='rob':
+    m=Mix(21.5,42)
+    m.put(shimmer(),0.05,0.2);m.put(honk(),0.6,0.15);m.put(pop(600),3.4,0.35)
+    m.put(whoosh(0.5),4.8,0.45);m.put(ding(1318),4.95,0.3);m.put(pop(650),4.95,0.3);m.put(chaching(),6.3,0.4)
+    for k in range(6):m.put(tick(),6.3+k*0.1,0.3)
+    m.put(bruhnote(),7.2,0.25)
+    m.put(whoosh(0.5),7.9,0.4)
+    for k in range(16):m.put(tick(),8.1+k*0.1,0.25)
+    m.put(vineboom(),9.0,0.42);m.put(recordscratch(),9.3,0.25)
+    m.put(whoosh(0.5),10.2,0.4)
+    for k in range(5):m.put(step(),10.3+k*0.25,0.3)
+    m.put(shimmer(),11.4,0.3);m.put(pop(800),11.5,0.35);m.put(ding(1568),11.8,0.25);m.put(chaching(),13.75,0.38)
+    m.put(whoosh(0.5),14.45,0.4);m.put(clunk(),14.7,0.45);m.put(creak(1.2),14.75,0.3);m.put(airhorn(0.6),16.2,0.2);m.put(pop(700),16.25,0.3)
+    for k in range(10):m.put(tick(),16.3+k*0.2,0.25)
+    m.put(whoosh(0.5),18.55,0.4)
+    for k in range(5):m.put(pop(600+k*120),18.7+k*0.12,0.3)
+    m.put(chaching(),19.6,0.38);m.put(ooh(),19.65,0.25)
+    m.put(whoosh(0.6),19.8,0.4)
+    m.save('w_rob/sfx.wav')
+if which=='ears':
+    m=Mix(21.5,43)
+    m.put(jet(2.4),0.0,0.25);m.put(shimmer(),0.05,0.2);m.put(squish(0.4),1.2,0.3)
+    m.put(whoosh(0.5),2.35,0.45);m.put(pop(650),2.9,0.35);m.put(pop(750),3.5,0.35);m.put(bloop(1.1),4.2,0.35);m.put(ding(1175),4.25,0.25)
+    m.put(whoosh(0.7),5.55,0.4);m.put(jet(3.2),5.6,0.35);m.put(slide(200,900,1.6),6.0,0.2);m.put(pop(700),7.1,0.35);m.put(dundun(),7.4,0.3)
+    m.put(whoosh(0.5),8.7,0.4);m.put(stretch(1.2),9.4,0.35);m.put(pop(800),10.8,0.35);m.put(boing(),10.85,0.25)
+    m.put(whoosh(0.5),11.75,0.4);m.put(pop(700),12.6,0.35);m.put(snap(),13.95,0.4);m.put(recordscratch(),13.6,0.2)
+    for k in range(6):m.put(bloop(1+k*0.12),14.1+k*0.25,0.25)
+    m.put(slide(900,500,0.8),14.7,0.18);m.put(ding(1318),15.9,0.3)
+    m.put(whoosh(0.4),16.5,0.35);m.put(pop(450),16.62,0.5);m.put(vineboom(),16.65,0.4)
+    m.put(whoosh(0.5),17.3,0.4);m.put(pop(800),17.5,0.35)
+    for k in range(5):m.put(munch(),17.7+k*0.42,0.3)
+    m.put(pop(900),18.1,0.3);m.put(whoosh(0.6),19.7,0.4);m.put(jet(1.7),19.8,0.22)
+    m.save('w_ears/sfx.wav')
+# keep SFX ~13-15 dB under the narrator: trim the normalized file by -3.5 dB
+import subprocess,os
+f=f'w_{which}/sfx.wav';subprocess.run(['ffmpeg','-y','-loglevel','error','-i',f,'-af','volume='+{'gator':'0.67','rob':'1.0','ears':'0.85'}[which],f+'.tmp.wav']);os.replace(f+'.tmp.wav',f)

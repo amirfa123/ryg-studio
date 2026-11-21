@@ -46,3 +46,7 @@ Format: - Question (category) [date/slot]
 - Would a real car explode like in GTA? (pop culture + GTA 6) [scheduled 2026-11-20 20:08] [YT 19:04]
 - How do cats always land on their feet? (wildcard/animals) [scheduled 2026-11-20 21:57]
 <!-- 2026-11-20 10 AM run: YouTube best-1 = car explode (GTA spotlight + strongest hook + clean diagrams; no early Metricool data yet for the morning's thumb/neutron videos). Day total on YouTube shorts: 3 (police heli 10:53, follower line 12:34, car explode 19:04). Bodies: examples/shorts_1120b/. -->
+- Could you outrun an alligator like in GTA 6? (crazy what-if/animals + GTA 6) [scheduled 2026-11-21 07:57] [YT 11:03]
+- How many stores would you need to rob in GTA 6 to make a million dollars? (pop culture + GTA 6) [scheduled 2026-11-21 11:06]
+- Why do your ears pop on a plane? (body/everyday) [scheduled 2026-11-21 13:53]
+<!-- 2026-11-21 1 AM run: YouTube 11:03 = alligator [YT] (GTA spotlight + most physical animation: swim chase, land chase). Non-YouTube morning videos for the 10 AM run's pick: rob million (GTA money), ears pop. 2 GTA shorts done today (quota met). Day still needs: 1 body/everyday, 1 crazy what-if, 1 wildcard (e.g. Thanksgiving sleepy, foot falls asleep, shooting star, polar bear). Bodies: examples/shorts_1121/. -->
