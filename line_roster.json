@@ -61,5 +61,22 @@
    "date": "2026-11-21",
    "reason": "references a real celebrity's name (possible impersonation) - skipped per \"when unsure, skip\"; owner can add manually"
   }
- ]
+ ],
+ "_leaders": {
+  "youtube": [
+   {
+    "date": "2026-11-19..21",
+    "handle": "amirelates",
+    "note": "owner account - never again"
+   }
+  ],
+  "instagram": [
+   {
+    "date": "2026-11-20..21",
+    "handle": "amii.ne_op"
+   }
+  ],
+  "tiktok": [],
+  "facebook": []
+ }
 }
