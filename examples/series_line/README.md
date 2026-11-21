@@ -18,3 +18,9 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - New comparisons: `everest` (vertical, cmpFrac = line/Everest), `pyramid` (vertical), `channel` (horizontal England→France), `whale` (horizontal). Leader face follows outfit (beanie/shades).
 - Script: never say "and" before the comparison ends (cue = first "and"); write "1.5"/"22.5" as digits, not "one and a half".
 - Word fix: a digit word followed by a word > 0.6 s gets its end moved to next.end-0.35 (TTS reads the number over the next word).
+
+## Added Day 3 (2026-11-21)
+- New comparisons: `trench` (vertical DOWN, ocean cross-section; cmpFrac = line/trench depth ≥1), `bus` (two school buses end to end; cmpFrac = line/(2×12.2 m)), `obelisk` (tall monument; cmpFrac = line/169 m).
+- Name tags: when > 6 names, S6 uses tidy rows (38px pills, round-robin by screen x, all names, crowned first joiner + "= FRONT OF THE LINE" pill under the rows); S3 keeps the old few-visible-tags mode. S6 tags fade out on "hit" so they never cover the guy at the loop.
+- 2D leader face now supports `snapback` (outfit `{snapback:1,chain:1}`).
+- Keep cmpTitle ≤ ~30 chars (longer auto-shrinks and gets tiny).
