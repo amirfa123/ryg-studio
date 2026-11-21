@@ -51,3 +51,7 @@ Format: - Question (category) [date/slot]
 - Why do your ears pop on a plane? (body/everyday) [scheduled 2026-11-21 13:53]
 <!-- 2026-11-21 1 AM run: YouTube 11:03 = alligator [YT] (GTA spotlight + most physical animation: swim chase, land chase). Non-YouTube morning videos for the 10 AM run's pick: rob million (GTA money), ears pop. 2 GTA shorts done today (quota met). Day still needs: 1 body/everyday, 1 crazy what-if, 1 wildcard (e.g. Thanksgiving sleepy, foot falls asleep, shooting star, polar bear). Bodies: examples/shorts_1121/. -->
 - How do you get rich fast in GTA 6? (long-form, pop culture / GTA 6 money) [scheduled 2026-11-21 18:00, YouTube video + Facebook] — 4:21, 7 steps + bonus; bodies in examples/rich_long/
+- Why do you get so sleepy after Thanksgiving dinner? (body/everyday) [scheduled 2026-11-21 16:54]
+- What would happen if you hugged a polar bear? (wildcard/animals) [scheduled 2026-11-21 20:07] [YT 19:04]
+- Could you swim to the bottom of the Mariana Trench? (crazy what-if) [scheduled 2026-11-21 21:51]
+<!-- 2026-11-21 10 AM run: YouTube best-1 = polar bear (no early Metricool data yet: the morning's rob-million and ears-pop posts weren't live when picked; chose polar bear for the most varied visuals (seesaw, fur microscope, thermal cam) and to avoid a second GTA-money upload an hour after the 18:00 GTA money long-form). Day total on YouTube shorts: 3 (alligator 11:03, follower line 12:33, polar bear 19:04). Bodies: examples/shorts_1121b/. -->

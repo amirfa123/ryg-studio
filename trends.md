@@ -48,7 +48,7 @@ Format: question — category — science hook.
 
 ### Body / everyday
 8. ✅ **What happens to your body when you get really mad?** — body (#anger, rides the "I Got So Mad" trend) — Adrenaline: heart rate spikes, blood rushes to muscles, your face flushes, and digestion pauses.
-9. **Why do you get so sleepy after Thanksgiving dinner?** — body (#thanksgiving) — It's not really the turkey's tryptophan. A huge meal sends blood and energy to your gut, and your body flips into "rest and digest".
+9. ✅ **Why do you get so sleepy after Thanksgiving dinner?** — body (#thanksgiving) — It's not really the turkey's tryptophan. A huge meal sends blood and energy to your gut, and your body flips into "rest and digest".
 10. ✅ **Why do you get brain freeze?** — body (#brainfreeze) — Cold hits the roof of your mouth, blood vessels rapidly widen, and a nerve in your face reports it as a headache.
 11. ✅ **Why do your fingers wrinkle in water?** — body (#fingers) — It's your nervous system shrinking blood vessels on purpose (probably for grip). Fingers with cut nerves don't wrinkle.
 12. ✅ **Why do you hiccup?** — body (#hiccups) — Your diaphragm spasms, and your vocal cords snap shut a split second later. That snap is the "hic".
@@ -63,7 +63,7 @@ Format: question — category — science hook.
 
 ### Wildcard
 19. **What happens when a shooting star hits the atmosphere?** — wildcard/space (#leonids, post this week) — Most Leonids are the size of a grain of sand. At ~71 km/s they vaporise ~100 km up, and that streak is glowing air.
-20. **What would happen if you hugged a polar bear?** — wildcard/animals (#polarbear, rides "Remember November 2026") — Under the white fur its skin is black, and each hair is actually clear and hollow.
+20. ✅ **What would happen if you hugged a polar bear?** — wildcard/animals (#polarbear, rides "Remember November 2026") — Under the white fur its skin is black, and each hair is actually clear and hollow.
 21. ✅ **How do cats always land on their feet?** — wildcard/animals (#cat) — Mid-fall they twist the front half one way and the back half the other, flipping over without pushing on anything.
 
 ### Long-form ideas (~5 min, 16:9)

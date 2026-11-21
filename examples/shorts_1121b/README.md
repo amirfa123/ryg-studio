@@ -1,0 +1,6 @@
+# Nov 21 shorts — 10 AM run
+Bodies use w_lib.js via w_sheet2.sh. SFX: w_sfx_1121b.py (sleepy / bear / trench).
+
+1. **Why do you get so sleepy after Thanksgiving dinner?** (body/everyday, #thanksgiving) — 16:54. Facts: Harvard Health / Cleveland Clinic — turkey has about the same tryptophan as chicken; a big meal (often 3,000+ calories) plus "rest and digest" makes you drowsy. New: dining-room set (chair, table, original roast turkey, 7 pop-in side dishes), drumstick comparison, GO MODE / REST & DIGEST switch, body map with glowing gut. Outfit: chef hat.
+2. **What would happen if you hugged a polar bear?** (wildcard/animals, #polarbear) — 20:07 + YouTube 19:04 [YT]. Facts: big males ~350–700 kg; hairs are transparent and hollow over black skin; Guinness — so well insulated they barely show up on infrared. New: arctic set, original polar bear (mkBear), seesaw gag, fur microscope, thermal camera view. Outfit: beanie.
+3. **Could you swim to the bottom of the Mariana Trench?** (crazy what-if, #marianatrench) — 21:51. Facts: Challenger Deep ~10,935 m; Everest 8,849 m (≈2 km to spare); no-limits freedive record 214 m (Nitsch, 2007); ~16,000 psi ≈ 8 tons per square inch. New: boat-on-ocean set, underwater set (motes, rays, bubbles, record rope tag), trench cutaway with Everest, 1-ton weights stack + crushed can. Plain outfit.
