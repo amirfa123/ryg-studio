@@ -50,3 +50,4 @@ Format: - Question (category) [date/slot]
 - How many stores would you need to rob in GTA 6 to make a million dollars? (pop culture + GTA 6) [scheduled 2026-11-21 11:06]
 - Why do your ears pop on a plane? (body/everyday) [scheduled 2026-11-21 13:53]
 <!-- 2026-11-21 1 AM run: YouTube 11:03 = alligator [YT] (GTA spotlight + most physical animation: swim chase, land chase). Non-YouTube morning videos for the 10 AM run's pick: rob million (GTA money), ears pop. 2 GTA shorts done today (quota met). Day still needs: 1 body/everyday, 1 crazy what-if, 1 wildcard (e.g. Thanksgiving sleepy, foot falls asleep, shooting star, polar bear). Bodies: examples/shorts_1121/. -->
+- How do you get rich fast in GTA 6? (long-form, pop culture / GTA 6 money) [scheduled 2026-11-21 18:00, YouTube video + Facebook] — 4:21, 7 steps + bonus; bodies in examples/rich_long/
