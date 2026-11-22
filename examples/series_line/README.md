@@ -24,3 +24,10 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - Name tags: when > 6 names, S6 uses tidy rows (38px pills, round-robin by screen x, all names, crowned first joiner + "= FRONT OF THE LINE" pill under the rows); S3 keeps the old few-visible-tags mode. S6 tags fade out on "hit" so they never cover the guy at the loop.
 - 2D leader face now supports `snapback` (outfit `{snapback:1,chain:1}`).
 - Keep cmpTitle ≤ ~30 chars (longer auto-shrinks and gets tiny).
+
+## Added Day 4 (2026-11-22)
+- New comparisons: `sky` (vertical altitude; `skyObj:'jet'|'balloon'`, `skyLbl` label; cmpFrac = line/altitude ≥1), `bowling` (one lane foul line→head pin 18.29 m, drawn at 1/cmpFrac so the line fits), `tower` (simple original lattice tower; cmpFrac = line/330 m).
+- 2D leader face supports `headphones` (`hpHex` color, purple #7C4DFF matches the 3D headphones).
+- S6 tidy name-tag rows now shrink the font (38→26 px) until the rows + "FRONT OF THE LINE" pill end above y≈1330, so captions never cover them with 25 names.
+- Pop word for `sky` sits low-left (y 1010) so it doesn't cover the plane/balloon; `tower` at y 700.
+- Display list = [today's leader] + newest 24 others; non-Latin handles (Arabic/Thai) are kept in the roster but not drawn (no fonts in the render box → boxes).
