@@ -53,7 +53,7 @@ Format: question — category — science hook.
 11. ✅ **Why do your fingers wrinkle in water?** — body (#fingers) — It's your nervous system shrinking blood vessels on purpose (probably for grip). Fingers with cut nerves don't wrinkle.
 12. ✅ **Why do you hiccup?** — body (#hiccups) — Your diaphragm spasms, and your vocal cords snap shut a split second later. That snap is the "hic".
 13. ✅ **Why do your ears pop on a plane?** — body (#ears) — Air pressure changes and a tiny tube behind your nose opens to even it out. Pop.
-14. **Why does your foot fall asleep?** — body (#foot) — Pressure squeezes the nerves so signals stop. When the pressure lifts, the nerves restart with pins and needles.
+14. ✅ **Why does your foot fall asleep?** — body (#foot) — Pressure squeezes the nerves so signals stop. When the pressure lifts, the nerves restart with pins and needles.
 
 ### Crazy "what would happen if…"
 15. ✅ **What would happen if you skydived from the edge of space?** — what-if (#space) — From ~39 km up there's so little air that a falling person can break the sound barrier (record ~1,357 km/h). Same journey format as fall-through-Earth.
@@ -62,7 +62,7 @@ Format: question — category — science hook.
 18. ✅ **What would happen if you held a spoonful of neutron star?** — what-if (#neutronstar) — One teaspoon weighs around a billion tonnes. It would punch straight through the Earth.
 
 ### Wildcard
-19. **What happens when a shooting star hits the atmosphere?** — wildcard/space (#leonids, post this week) — Most Leonids are the size of a grain of sand. At ~71 km/s they vaporise ~100 km up, and that streak is glowing air.
+19. ✅ **What happens when a shooting star hits the atmosphere?** — wildcard/space (#leonids, post this week) — Most Leonids are the size of a grain of sand. At ~71 km/s they vaporise ~100 km up, and that streak is glowing air.
 20. ✅ **What would happen if you hugged a polar bear?** — wildcard/animals (#polarbear, rides "Remember November 2026") — Under the white fur its skin is black, and each hair is actually clear and hollow.
 21. ✅ **How do cats always land on their feet?** — wildcard/animals (#cat) — Mid-fall they twist the front half one way and the back half the other, flipping over without pushing on anything.
 

@@ -55,3 +55,7 @@ Format: - Question (category) [date/slot]
 - What would happen if you hugged a polar bear? (wildcard/animals) [scheduled 2026-11-21 20:07] [YT 19:04]
 - Could you swim to the bottom of the Mariana Trench? (crazy what-if) [scheduled 2026-11-21 21:51]
 <!-- 2026-11-21 10 AM run: YouTube best-1 = polar bear (no early Metricool data yet: the morning's rob-million and ears-pop posts weren't live when picked; chose polar bear for the most varied visuals (seesaw, fur microscope, thermal cam) and to avoid a second GTA-money upload an hour after the 18:00 GTA money long-form). Day total on YouTube shorts: 3 (alligator 11:03, follower line 12:33, polar bear 19:04). Bodies: examples/shorts_1121b/. -->
+- Why does your foot fall asleep? (body/everyday) [scheduled 2026-11-22 07:54]
+- How long would it take to walk across the GTA 6 map? (pop culture + GTA 6) [scheduled 2026-11-22 11:07] [YT 11:02]
+- What happens when a shooting star hits the atmosphere? (wildcard/space) [scheduled 2026-11-22 13:51]
+<!-- 2026-11-22 1 AM run: YouTube 11:02 = GTA map walk [YT] (GTA spotlight + 6 distinct scenes). Non-YouTube morning videos for the 10 AM run's pick: foot asleep, shooting star. 1 GTA short done today; day still needs 1 more GTA 6 short, 2 crazy what-ifs (one can be the GTA one), 1 more body/everyday or pop culture. Bodies: examples/shorts_1122/. -->
