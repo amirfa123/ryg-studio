@@ -59,3 +59,7 @@ Format: - Question (category) [date/slot]
 - How long would it take to walk across the GTA 6 map? (pop culture + GTA 6) [scheduled 2026-11-22 11:07] [YT 11:02]
 - What happens when a shooting star hits the atmosphere? (wildcard/space) [scheduled 2026-11-22 13:51]
 <!-- 2026-11-22 1 AM run: YouTube 11:02 = GTA map walk [YT] (GTA spotlight + 6 distinct scenes). Non-YouTube morning videos for the 10 AM run's pick: foot asleep, shooting star. 1 GTA short done today; day still needs 1 more GTA 6 short, 2 crazy what-ifs (one can be the GTA one), 1 more body/everyday or pop culture. Bodies: examples/shorts_1122/. -->
+- Why do you shiver when you're cold? (body/everyday) [scheduled 2026-11-22 16:49]
+- Could a real car drive upside down through a loop like in GTA? (crazy what-if + GTA 6) [scheduled 2026-11-22 20:07] [YT 18:56]
+- What would happen if you jumped in a falling elevator? (crazy what-if) [scheduled 2026-11-22 22:02]
+<!-- 2026-11-22 10 AM run: YouTube best-1 = GTA car loop (GTA spotlight + strongest hook + most physical animation; early Metricool TikTok data for the morning videos was ~0 views, so no performance signal). Day total on YouTube shorts: 3 (GTA map walk 11:02, follower line 12:36, car loop 18:56). Day mix: 2 body (foot, shiver), 2 GTA (map walk, car loop), 2 what-if (car loop, elevator), 1 wildcard (shooting star). Bodies: examples/shorts_1122b/. -->
