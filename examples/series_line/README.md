@@ -31,3 +31,8 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - S6 tidy name-tag rows now shrink the font (38→26 px) until the rows + "FRONT OF THE LINE" pill end above y≈1330, so captions never cover them with 25 names.
 - Pop word for `sky` sits low-left (y 1010) so it doesn't cover the plane/balloon; `tower` at y 700.
 - Display list = [today's leader] + newest 24 others; non-Latin handles (Arabic/Thai) are kept in the roster but not drawn (no fonts in the render box → boxes).
+
+## Changed 2026-11-22 (owner request): names pinned to each little person
+- Owner did NOT like the "wall of names" (rows of pills with lines down to the crowd). Replaced with `headTags()`: every name floats directly above ITS OWN figure (NAMES[i] → figure i+1), short white stem to the head, neighbours alternate high/low, long handles shrink (min 30px) instead of overlapping. Today's leader = gold pill + "👑 LINE LEADER" on figure 1.
+- S6 camera now glides SIDE-ON along the line (cam x=5, y=1.2), starting centered on the leader during "Today's line leader is…", panning back through the joiners until "hit", then eases to CAM0 for the loop. Trees between camera and line are auto-hidden.
+- S3 shows NO name tags anymore (keeps the length counter clean). Don't bring back the old `nameTags()` rows.

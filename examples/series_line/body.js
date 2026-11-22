@@ -15,7 +15,7 @@ const L=(()=>{const S=new THREE.Scene();lights(S);S.fog=new THREE.Fog(0xCDEBFF,2
   part(S,new THREE.PlaneGeometry(600,600),toon(0x7CCB5A),[0,0,-200],[1,1,1],[-PI/2,0,0],0);
   part(S,new THREE.PlaneGeometry(1.5,600),toon(0xE8CF94),[0,0.01,-298],[1,1,1],[-PI/2,0,0],0);
   for(let i=0;i<70;i++)part(S,new THREE.CircleGeometry(0.4+hash(i)*0.6,14),toon(0x6AB84A),[(hash(i*3)-0.5)*30,0.015,4-hash(i*7)*60],[1,1,1],[-PI/2,0,0],0);
-  for(let i=0;i<90;i++){const side=i%2?1:-1,x=side*(3.5+hash(i*2.3)*14),z=2-hash(i*5.7)*140,s=0.7+hash(i*9.1)*0.8;const tr=new THREE.Group();tr.position.set(x,0,z);tr.scale.setScalar(s);S.add(tr);
+  for(let i=0;i<90;i++){const side=i%2?1:-1,x=side*(3.5+hash(i*2.3)*14),z=2-hash(i*5.7)*140,s=0.7+hash(i*9.1)*0.8;const tr=new THREE.Group();tr.position.set(x,0,z);tr.scale.setScalar(s);S.add(tr);(o.trees=o.trees||[]).push(tr);
     part(tr,cap(0.12,0.9),toon(0x8A5A2B),[0,0.55,0],[1,1,1],[0,0,0],0.01);part(tr,SPH,toon(i%3?0x3DAA5A:0x2E9E5B),[0,1.55,0],[0.75,0.7,0.75],[0,0,0],0.014)}
   const N=Math.min(CFG.count,4000);o.N=N;const SP=0.62;o.SP=SP;
   const gB=new THREE.SphereGeometry(1,14,10),gE=new THREE.SphereGeometry(1,6,4);
@@ -30,7 +30,7 @@ const L=(()=>{const S=new THREE.Scene();lights(S);S.fog=new THREE.Fog(0xCDEBFF,2
       for(const s of [-1,1]){sc.set(0.025*k,0.035*k,0.02*k);v.set(x+s*0.06*k,y+0.63*k,z+0.155*k);M.compose(v,q,sc);mE.setMatrixAt(i*2+(s>0?1:0),M)}}
     mB.instanceMatrix.needsUpdate=mH.instanceMatrix.needsUpdate=mE.instanceMatrix.needsUpdate=true};
   o.cam=new THREE.PerspectiveCamera(32,W/H,0.1,400);
-  o.shot=(p,l)=>{setBG('day');o.cam.position.set(...p);o.cam.lookAt(...l);r.render(S,o.cam)};return o})();
+  o.shot=(p,l)=>{setBG('day');o.cam.position.set(...p);o.cam.lookAt(...l);for(const tr of (o.trees||[]))tr.visible=!(p[0]>2.5&&tr.position.x>1.5&&tr.position.x<p[0]+1&&Math.abs(tr.position.z-p[2])<9);r.render(S,o.cam)};return o})();
 const CAM0={p:[3.4,2.3,8.6],l:[0.45,1.05,-1.0]};
 function lineScene(t,cam,o={},grow=0){L.update(t,grow);putGuy(L.S,0,0,0.2,-0.18);guy.pose(idle(t,{armR:[0.3+0.03*Math.sin(t*2+1),0],mouth:'smile',...o}));L.shot(cam.p,cam.l)}
 // ---------- 2D helpers ----------
@@ -233,6 +233,28 @@ function nameTags(t,a,yTop){if(a<=0)return;const list=NAMES.length?NAMES.map(n=>
     else{tagPill(it.s,0,0,FS);if(it.i===0){const cy=-FS*1.7;tagPill('FRONT OF THE LINE',0,cy,FS*0.72,{bg:'#FFD23F'});const c=FS*0.5;g.save();g.translate(0,cy-FS*1.15);g.fillStyle='#FFD23F';g.strokeStyle='#111';g.lineWidth=3;g.beginPath();g.moveTo(-c,c*0.5);g.lineTo(-c,-c*0.4);g.lineTo(-c*0.5,0);g.lineTo(0,-c*0.7);g.lineTo(c*0.5,0);g.lineTo(c,-c*0.4);g.lineTo(c,c*0.5);g.closePath();g.fill();g.stroke();g.restore()}}
     g.restore()}
   g.restore()}
+
+// --- NAME TAGS PINNED TO EACH LITTLE PERSON (owner request 2026-11-22) ---
+// Each name floats directly above its own figure (NAMES[i] -> figure i+1). Size shrinks with distance; neighbours
+// alternate high/low with a short stem so tags don't overlap. Use with a camera gliding along the line.
+function headTags(t,a){if(a<=0)return;const list=NAMES.length?NAMES.map(n=>'@'+n.replace(/^@/,'')):[null];g.save();g.globalAlpha=Math.min(1,a);
+  const items=[];list.forEach((s,i)=>{const fi=i+1;if(fi>=L.N)return;const [x,z]=L.pos(fi);const hop=0.05*Math.max(0,Math.sin(t*7+fi*0.9));
+    _v3.set(x,0.82+hop,z);const d=_v3.distanceTo(L.cam.position);_v3.project(L.cam);if(_v3.z>1||Math.abs(_v3.x)>1.15||_v3.y>1||_v3.y<-1)return;
+    items.push({s,i,hx:(_v3.x+1)/2*W,hy:(1-_v3.y)/2*H,d})});
+  items.sort((p,q)=>q.d-p.d);// far first, near on top
+  const placed=[];
+  for(const it of items){const lbl=it.s===null?'@YOUR_NAME?':it.s;let fs=clamp(Math.round(240/it.d),36,50);g.font=`800 ${fs}px Inter`;while(fs>30&&g.measureText(lbl).width+fs>540){fs-=2;g.font=`800 ${fs}px Inter`}const w=g.measureText(lbl).width+fs*1.0,h=fs*1.6;
+    let lift=fs*1.15+(it.i%2)*fs*1.75;let cx=clamp(it.hx,w/2+12,W-w/2-12),ty=it.hy-lift;
+    let n=0;while(n++<12&&placed.some(r=>Math.abs(r.x-cx)<(r.w+w)/2+6&&Math.abs(r.y-ty)<(r.h+h)/2+4)){ty-=h*0.8}
+    placed.push({x:cx,y:ty,w,h});
+    const pop=backOut(clamp(a*1.2));
+    g.strokeStyle='rgba(255,255,255,0.95)';g.lineWidth=Math.max(2,fs/12);g.beginPath();g.moveTo(it.hx,it.hy-fs*0.25);g.lineTo(cx,ty+h/2);g.stroke();
+    g.save();g.translate(cx,ty);g.scale(pop,pop);
+    if(it.s===null){tagPill(lbl,0,0,fs,{dash:1,bg:'rgba(255,255,255,0.9)'});tagPill('THE FRONT IS OPEN!',0,-fs*1.75,fs*0.75,{bg:'#FFD23F'})}
+    else if(it.i===0){tagPill(lbl,0,0,fs,{bg:'#FFE680'});const cy=-fs*1.7;tagPill('👑 LINE LEADER',0,cy,fs*0.72,{bg:'#FFD23F'})}
+    else tagPill(lbl,0,0,fs);
+    g.restore()}
+  g.restore()}
 // --- globe ---
 function globe(t,k,z){const cx=W/2,cy=860,R=360;g.save();for(let i=0;i<90;i++){g.fillStyle=`rgba(255,255,255,${0.3+0.6*Math.abs(Math.sin(t*2+i))})`;g.beginPath();g.arc(hash(i*3.1)*W,hash(i*7.7)*H,1.5+hash(i)*2.5,0,7);g.fill()}
   g.shadowColor='rgba(110,180,255,0.7)';g.shadowBlur=60;g.fillStyle='#2E78D6';g.beginPath();g.arc(cx,cy,R,0,7);g.fill();g.restore();
@@ -261,7 +283,7 @@ window.render=function(t){g.clearRect(0,0,W,H);hideProps();
     const u=easeOut(seg(t,C.num,C.num+1.1));g.save();const s=backOut(seg(t,C.there,C.there+0.35));g.translate(W/2,300);g.scale(s,s);panel(0,0,860,250);txt(fmt(CFG.count*u),0,-22,140,{stroke:0,fill:'#fff'});txt(CFG.who,0,82,46,{stroke:0,fill:'#FFD23F'});g.restore();
     comic(CFG.count>=1000?'WOW!':'AWW!',W*0.76,620,110,t,C.num+1.15,{life:1.1,rot:0.1,fill:'#fff'})}
   else if(t<C.thats){// S3: side dolly along the line + length counter
-    const k=seg(t,C.which,C.thats),zc=-2-k*Math.min(L.N*L.SP*0.6,40);lineScene(t,{p:[4.2,1.4,zc+3.0],l:[0,0.5,zc-1.0]},{});flash(t,C.which,0.15);nameTags(t,easeOut(seg(t,C.which+0.3,C.which+0.7)));
+    const k=seg(t,C.which,C.thats),zc=-2-k*Math.min(L.N*L.SP*0.6,40);lineScene(t,{p:[4.2,1.4,zc+3.0],l:[0,0.5,zc-1.0]},{});flash(t,C.which,0.15);
     pill('1 PERSON ≈ 0.5 M',W/2,560,50,'#fff','#111',t,C.which+0.2,C.thats);
     const u=easeOut(seg(t,C.which+0.3,C.thats-0.4));g.save();const s=backOut(seg(t,C.which,C.which+0.35));g.translate(W/2,320);g.scale(s,s);panel(0,0,820,230,'rgba(10,12,25,0.88)','#3FF0FF');
     const v=CFG.lenM*u;txt(CFG.lenM>=1000?(v/1000).toFixed(1)+' KM':v.toFixed(1)+' M',0,-12,128,{stroke:0});txt('LONG LINE',0,78,40,{stroke:0,fill:'#3FF0FF'});g.restore();
@@ -275,9 +297,13 @@ window.render=function(t){g.clearRect(0,0,W,H);hideProps();
     clear3d();setBG('space');flash(t,C.and,0.15);globe(t,1,seg(t,C.pctWord,C.pctWord+1.4));
     const a=easeOut(seg(t,C.pctWord,C.pctWord+0.3));g.save();g.globalAlpha=a;const s=backOut(seg(t,C.pctWord,C.pctWord+0.35));g.translate(W/2,250);g.scale(s,s);panel(0,0,700,170,'rgba(10,12,25,0.88)','#FFD23F');txt(CFG.pctText,0,-14,104,{stroke:0,fill:'#FFD23F'});txt('OF THE WAY AROUND',0,58,36,{stroke:0});g.restore();
     pctBar(t,a,1215);comic('BRUH.',W*0.25,560,96,t,C.s6-1.1,{life:1.2,rot:-0.1,fill:'#fff'})}
-  else{// S6: close on the commenters' name tags, cheer, ease back to opening frame (loop)
-    const u=t-TT,k=ease(seg(t,C.s6+0.6,TT-0.15));const cheer=1-ease(seg(t,TT-1.0,TT-0.2));
-    lineScene(u,{p:mix([3.3,1.55,4.2],CAM0.p,k),l:mix([0.2,0.75,-2.6],CAM0.l,k)},{armL:[lerp(0.3+0.03*Math.sin(u*2),2.7+0.25*Math.sin(t*12),cheer),0.2*cheer],armR:[lerp(0.3+0.03*Math.sin(u*2+1),2.7+0.25*Math.cos(t*12),cheer),-0.2*cheer],mouth:cheer>0.5?'grin':'smile',jump:cheer>0?0.06*cheer*Math.abs(Math.sin(t*9)):0.012*Math.sin(u*2.4),blink:BLINK(u),bendL:0.3*cheer,bendR:0.3*cheer});
-    nameTags(t,easeOut(seg(t,C.s6,C.s6+0.4))*(1-seg(t,C.hit-0.1,C.hit+0.4)),470);
+  else{// S6: camera glides down the line, every commenter's name pinned over their own little person; then back to opening (loop)
+    const u=t-TT,cheer=1-ease(seg(t,TT-1.0,TT-0.2));
+    const nShow=Math.min(Math.max(NAMES.length,1),Math.floor((C.hit-C.s6)*2.6/L.SP)+3);const zEnd=L.pos(nShow)[1]+1.2;
+    const z0=L.pos(1)[1]-0.15,kp=ease(seg(t,C.s6,C.hit-0.15)),zc=lerp(z0,Math.min(z0,zEnd-0.6),kp);
+    const glide={p:[5.0,1.2,zc+0.2],l:[0,0.7,zc]};
+    const kb=ease(seg(t,C.hit-0.15,TT-0.15));const cam={p:mix(glide.p,CAM0.p,kb),l:mix(glide.l,CAM0.l,kb)};
+    lineScene(u,cam,{armL:[lerp(0.3+0.03*Math.sin(u*2),2.7+0.25*Math.sin(t*12),cheer),0.2*cheer],armR:[lerp(0.3+0.03*Math.sin(u*2+1),2.7+0.25*Math.cos(t*12),cheer),-0.2*cheer],mouth:cheer>0.5?'grin':'smile',jump:cheer>0?0.06*cheer*Math.abs(Math.sin(t*9)):0.012*Math.sin(u*2.4),blink:BLINK(u),bendL:0.3*cheer,bendR:0.3*cheer});
+    headTags(t,easeOut(seg(t,C.s6,C.s6+0.4))*(1-seg(t,C.hit,C.hit+0.45)));
     flash(t,C.s6,0.15);pill('COMMENT TO JOIN THE LINE!',W/2,330,60,'#fff','#111',t,C.cta,C.hit+0.05);pill('HIT '+CFG.cta+'!',W/2,330,74,'#FF3D7F','#fff',t,C.hit+0.05,TT-0.6);comic('+1',W*0.7,700,110,t,C.hit+0.9,{life:0.8,rot:0.1,fill:'#5BE37A'});comic('+1',W*0.3,640,100,t,C.hit+1.5,{life:0.8,rot:-0.1,fill:'#5BE37A'})}
   vignette();captions(t)};
