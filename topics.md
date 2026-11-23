@@ -63,3 +63,7 @@ Format: - Question (category) [date/slot]
 - Could a real car drive upside down through a loop like in GTA? (crazy what-if + GTA 6) [scheduled 2026-11-22 20:07] [YT 18:56]
 - What would happen if you jumped in a falling elevator? (crazy what-if) [scheduled 2026-11-22 22:02]
 <!-- 2026-11-22 10 AM run: YouTube best-1 = GTA car loop (GTA spotlight + strongest hook + most physical animation; early Metricool TikTok data for the morning videos was ~0 views, so no performance signal). Day total on YouTube shorts: 3 (GTA map walk 11:02, follower line 12:36, car loop 18:56). Day mix: 2 body (foot, shiver), 2 GTA (map walk, car loop), 2 what-if (car loop, elevator), 1 wildcard (shooting star). Bodies: examples/shorts_1122b/. -->
+- Why do your eyes hurt after playing GTA 6 all day? (body/everyday + GTA 6) [scheduled 2026-11-23 08:11]
+- Could a dog really rescue you at sea like in GTA 6? (pop culture + GTA 6) [scheduled 2026-11-23 10:49] [YT 10:53]
+- What would happen if you went to space without a spacesuit? (crazy what-if) [scheduled 2026-11-23 14:05]
+<!-- 2026-11-23 1 AM run: YouTube 10:53 = dog rescue [YT] (GTA spotlight + this week's #1 GTA-animals meme + most varied staging: boat, helicopter jumps, beach, towing). Non-YouTube morning videos for the 10 AM run's pick: gaming eyes, space no suit. 2 GTA shorts done today (quota met). Day still needs: 1 body/everyday (non-GTA), 1 crazy what-if, 1 wildcard (e.g. turkey fly, see your breath, cats knead, Black Friday money). Bodies: examples/shorts_1123/. -->

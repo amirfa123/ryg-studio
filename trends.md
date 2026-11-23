@@ -133,7 +133,7 @@ Notes:
 Format: question — category (#topic) — science hook. Verify any non-obvious number with a quick search before scripting.
 
 ### Pop culture / trending
-1. **Could a dog really rescue you at sea like in GTA 6?** — pop culture + GTA 6 (#gta6)
+1. ✅ **Could a dog really rescue you at sea like in GTA 6?** — pop culture + GTA 6 (#gta6)
    - Real lifeguard dogs (big water breeds like Newfoundlands) are trained to tow swimmers to shore.
    - In Italy they even jump from helicopters.
    - Stand-in: a generic dog with shades.
@@ -165,7 +165,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
    - Generic rocket and tower, no logos.
 
 ### Body / everyday
-10. **Why do your eyes hurt after gaming all day?** — body + GTA 6 tie-in (#eyes)
+10. ✅ **Why do your eyes hurt after gaming all day?** — body + GTA 6 tie-in (#eyes)
     - When you stare at a screen, your blinking drops by about half, so your eyes dry out.
     - Focusing at one distance for hours also tires the focusing muscles.
 11. **Why do songs get stuck in your head?** — body (#earworm, rides the Mariah Christmas takeover)
@@ -181,7 +181,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
     - Your stomach "flutters" and slows down.
 
 ### Crazy "what would happen if…"
-15. **What would happen if you went to space without a spacesuit?** — what-if (#space)
+15. ✅ **What would happen if you went to space without a spacesuit?** — what-if (#space)
     - You'd stay conscious for about 10–15 s.
     - You wouldn't explode, but your saliva would boil and you'd swell.
     - The "could YOU" angle helps space do better.
