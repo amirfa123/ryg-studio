@@ -171,7 +171,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 11. **Why do songs get stuck in your head?** — body (#earworm, rides the Mariah Christmas takeover)
     - Over 90% of people get an "earworm" at least weekly.
     - Your brain replays unfinished, catchy loops.
-12. **Why do you always have room for dessert?** — body (#thanksgiving)
+12. ✅ **Why do you always have room for dessert?** — body (#thanksgiving)
     - "Sensory-specific satiety": you get bored of one flavor, but a new taste resets your appetite.
 13. **Why does your nose run when it's cold?** — body (#cold)
     - Your nose warms and wets cold, dry air.
@@ -188,12 +188,12 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 16. **What would happen if Earth had rings like Saturn?** — what-if (#saturn)
     - They'd arc across the sky as a giant bright band.
     - Their shadow would make some places noticeably colder in winter.
-17. **What would happen if the Moon crashed into Earth?** — what-if (#moon)
+17. ✅ **What would happen if the Moon crashed into Earth?** — what-if (#moon)
     - It would break apart before touching us (the Roche limit, ~18,000 km).
     - Earth would get a ring, then a rain of molten rock.
 
 ### Wildcard
-18. **Can a turkey actually fly?** — wildcard/animals (#turkey, Thanksgiving week)
+18. ✅ **Can a turkey actually fly?** — wildcard/animals (#turkey, Thanksgiving week)
     - Wild turkeys can burst-fly at around 80–90 km/h.
     - Farm turkeys are bred too heavy to get off the ground.
 19. **Why can you see your breath in winter?** — wildcard/everyday (#winter)
