@@ -50,6 +50,7 @@ function leader(x,y,s){// Round Yellow Guy face marker at the front of the 2D li
   if(OUT.beanie){g.fillStyle=OUT.beanieColor||'#E2483D';g.beginPath();g.arc(0,-14,33,PI,2*PI);g.closePath();g.fill();g.stroke();g.fillStyle='#fff';rr(-36,-20,72,14,7);g.fill();g.stroke();g.beginPath();g.arc(0,-50,9,0,7);g.fill();g.stroke()}
   else if(OUT.snapback){g.fillStyle=OUT.capHex||'#1C1C24';g.beginPath();g.arc(0,-12,34,PI,2*PI);g.closePath();g.fill();g.stroke();g.fillStyle='#E2483D';rr(-35,-20,70,10,5);g.fill();g.stroke();g.fillStyle=OUT.capHex||'#1C1C24';g.beginPath();g.ellipse(30,-20,20,7,0.25,0,7);g.fill();g.stroke()}
   else if(OUT.headphones){g.strokeStyle='#111';g.lineWidth=14;g.beginPath();g.arc(0,-2,38,PI*1.05,PI*1.95);g.stroke();g.strokeStyle=OUT.hpHex||'#E2483D';g.lineWidth=8;g.stroke();g.lineWidth=6;g.strokeStyle='#111';for(const s3 of [-1,1]){g.fillStyle=OUT.hpHex||'#E2483D';rr(s3*36-11,-14,22,34,9);g.fill();g.stroke()}}
+  else if(OUT.hardhat){g.fillStyle='#FFB000';g.beginPath();g.arc(0,-14,32,PI,2*PI);g.closePath();g.fill();g.stroke();rr(-42,-20,84,11,5);g.fill();g.stroke();g.fillStyle='#FFD45C';rr(-5,-44,10,26,4);g.fill()}
   else{g.fillStyle='#FFD23F';g.beginPath();g.moveTo(-22,-30);g.lineTo(-24,-52);g.lineTo(-11,-40);g.lineTo(0,-56);g.lineTo(11,-40);g.lineTo(24,-52);g.lineTo(22,-30);g.closePath();g.fill();g.stroke()}
   g.lineWidth=4;for(const s2 of [-1,1]){if(OUT.shades){g.fillStyle='#111';g.beginPath();g.ellipse(s2*13,2,12,8,0,0,7);g.fill()}else{g.fillStyle='#fff';g.beginPath();g.arc(s2*13,2,9,0,7);g.fill();g.stroke();g.fillStyle='#111';g.beginPath();g.arc(s2*13,3,3.5,0,7);g.fill()}}
   g.fillStyle='#3A2A20';g.beginPath();g.ellipse(-8,18,9,4,0.3,0,7);g.ellipse(8,18,9,4,-0.3,0,7);g.fill();g.restore()}
@@ -200,7 +201,21 @@ function cmpTower(t,k){// vertical: simple original lattice tower (330 m); line 
   for(let i=0;i<5;i++){const tx=60+i*90+(i>1?560:0);if(tx>W-40)continue;g.fillStyle='#8A5A2B';g.fillRect(tx-6,y0-30,12,30);g.fillStyle='#2E9E5B';g.strokeStyle='#111';g.lineWidth=4;g.beginPath();g.arc(tx,y0-46,26,0,7);g.fill();g.stroke()}
   g.setLineDash([16,12]);g.strokeStyle='rgba(255,255,255,0.95)';g.lineWidth=5;g.beginPath();g.moveTo(cx,y0-hT);g.lineTo(960,y0-hT);g.stroke();g.setLineDash([]);txt('TOP',cx+170,y0-hT-30,38,{sw:9});g.restore();
   climb(t,k,930,y0,hT,10)}
-const CMP={tennis:cmpTennis,field:cmpField,marathon:cmpMarathon,island:cmpIsland,everest:cmpEverest,pyramid:cmpPyramid,channel:cmpChannel,whale:cmpWhale,trench:cmpTrench,bus:cmpBus,obelisk:cmpObelisk,sky:cmpSky,bowling:cmpBowling,tower:cmpTower};
+function cmpSkyscraper(t,k){// vertical: simple original stepped supertall tower (e.g. 828 m); line = cmpFrac × tower height
+  setBG('linear-gradient(#FF9E6B,#FFE1B8)');const y0=1250,hS=Math.min(820,880/Math.max(1,CFG.cmpFrac)),cx=520,bw=hS*0.2;g.save();
+  g.fillStyle='rgba(255,245,200,0.9)';g.beginPath();g.arc(170,420,70,0,7);g.fill();
+  for(let i=0;i<9;i++){const bx=40+i*120,bh=60+hash(i*3.7)*120;if(Math.abs(bx+45-cx)<bw*0.7)continue;g.fillStyle='rgba(120,90,110,0.55)';g.fillRect(bx,y0-bh,90,bh)}
+  g.fillStyle='#E9C27A';g.fillRect(0,y0,W,H-y0);g.strokeStyle='#111';g.lineWidth=6;g.beginPath();g.moveTo(0,y0);g.lineTo(W,y0);g.stroke();
+  const tiers=[[0,1],[0.22,0.82],[0.42,0.64],[0.58,0.48],[0.7,0.34],[0.78,0.22]];
+  tiers.forEach(([f,wf],i)=>{const top=i<tiers.length-1?tiers[i+1][0]:0.84,w=bw*wf,yb=y0-hS*f,yt=y0-hS*top;
+    g.fillStyle='#8FC4E8';g.fillRect(cx-w/2,yt,w,yb-yt);g.fillStyle='#6FA6D0';g.fillRect(cx+w*0.1,yt,w*0.4,yb-yt);
+    g.strokeStyle='rgba(40,70,100,0.5)';g.lineWidth=2;for(let y=yt+10;y<yb;y+=14){g.beginPath();g.moveTo(cx-w/2,y);g.lineTo(cx+w/2,y);g.stroke()}
+    g.strokeStyle='#111';g.lineWidth=5;g.strokeRect(cx-w/2,yt,w,yb-yt)});
+  g.strokeStyle='#111';g.lineWidth=5;g.fillStyle='#B8D8EE';g.beginPath();g.moveTo(cx-bw*0.06,y0-hS*0.84);g.lineTo(cx,y0-hS);g.lineTo(cx+bw*0.06,y0-hS*0.84);g.closePath();g.fill();g.stroke();
+  g.fillStyle='#E2483D';g.beginPath();g.arc(cx,y0-hS-4,6+2*Math.sin(t*6),0,7);g.fill();
+  g.setLineDash([16,12]);g.strokeStyle='rgba(255,255,255,0.95)';g.lineWidth=5;g.beginPath();g.moveTo(cx,y0-hS);g.lineTo(960,y0-hS);g.stroke();g.setLineDash([]);txt('TOP',cx+170,y0-hS-30,38,{sw:9});g.restore();
+  climb(t,k,930,y0,hS,10)}
+const CMP={tennis:cmpTennis,field:cmpField,marathon:cmpMarathon,island:cmpIsland,everest:cmpEverest,pyramid:cmpPyramid,channel:cmpChannel,whale:cmpWhale,trench:cmpTrench,bus:cmpBus,obelisk:cmpObelisk,sky:cmpSky,bowling:cmpBowling,tower:cmpTower,skyscraper:cmpSkyscraper};
 // --- commenter name tags above the 3D line (this platform's commenters only) ---
 const _v3=new THREE.Vector3();
 function tagPill(s,x,y,fs,o={}){g.save();g.font=`800 ${fs}px Inter`;const w=g.measureText(s).width+fs*1.0,h=fs*1.6;
@@ -245,8 +260,10 @@ function headTags(t,a){if(a<=0)return;const list=NAMES.length?NAMES.map(n=>'@'+n
   const placed=[];
   for(const it of items){const lbl=it.s===null?'@YOUR_NAME?':it.s;let fs=clamp(Math.round(240/it.d),36,50);g.font=`800 ${fs}px Inter`;while(fs>30&&g.measureText(lbl).width+fs>540){fs-=2;g.font=`800 ${fs}px Inter`}const w=g.measureText(lbl).width+fs*1.0,h=fs*1.6;
     let lift=fs*1.15+(it.i%2)*fs*1.75;let cx=clamp(it.hx,w/2+12,W-w/2-12),ty=it.hy-lift;
-    let n=0;while(n++<12&&placed.some(r=>Math.abs(r.x-cx)<(r.w+w)/2+6&&Math.abs(r.y-ty)<(r.h+h)/2+4)){ty-=h*0.8}
-    placed.push({x:cx,y:ty,w,h});
+    const ex=(it.i===0||it.s===null)?fs*1.85:0;// leader/open tag has a 2nd pill above it: include it in the collision box
+    const box=()=>({x:cx,t:ty-h/2-ex,b:ty+h/2,w});const hit=()=>{const B=box();return placed.some(r=>Math.abs(r.x-B.x)<(r.w+B.w)/2+6&&B.t<r.b+4&&B.b>r.t-4)};
+    let n=0;while(n++<14&&hit()){ty-=h*0.8}
+    placed.push(box());
     const pop=backOut(clamp(a*1.2));
     g.strokeStyle='rgba(255,255,255,0.95)';g.lineWidth=Math.max(2,fs/12);g.beginPath();g.moveTo(it.hx,it.hy-fs*0.25);g.lineTo(cx,ty+h/2);g.stroke();
     g.save();g.translate(cx,ty);g.scale(pop,pop);
@@ -292,7 +309,7 @@ window.render=function(t){g.clearRect(0,0,W,H);hideProps();
   else if(t<C.and){// S4: comparison
     clear3d();flash(t,C.thats,0.15);const k=easeOut(seg(t,C.thats+0.2,C.cmpWord+0.3));CMP[CFG.cmp](t,k);
     g.save();const s=backOut(seg(t,C.thats,C.thats+0.35));g.translate(W/2,175);g.scale(s,s);panel(0,0,960,150);{g.font='900 78px Inter';const fs=Math.min(78,78*880/g.measureText(CFG.cmpTitle).width);txt(CFG.cmpTitle,0,0,fs,{stroke:0,fill:'#FFD23F'})};g.restore();
-    pill(CFG.cmpRef,W/2,1300,46,'#fff','#111',t,C.cmpWord,C.and);comic(CFG.cmpPop,['everest','pyramid','obelisk','sky','tower'].includes(CFG.cmp)?(CFG.cmp==='sky'?W*0.3:W*0.24):(CFG.cmpPop.length>6?W*0.62:W*0.74),CFG.cmp==='sky'?1010:CFG.cmp==='tower'?700:['everest','pyramid','obelisk'].includes(CFG.cmp)?520:470,CFG.cmpPop.length>6?78:96,t,C.cmpWord+0.15,{life:1.2,rot:0.1,fill:'#fff'})}
+    pill(CFG.cmpRef,W/2,1300,46,'#fff','#111',t,C.cmpWord,C.and);comic(CFG.cmpPop,['everest','pyramid','obelisk','sky','tower','skyscraper'].includes(CFG.cmp)?(CFG.cmp==='sky'?W*0.3:W*0.24):(CFG.cmpPop.length>6?W*0.62:W*0.74),CFG.cmp==='sky'?1010:CFG.cmp==='tower'?700:['everest','pyramid','obelisk','skyscraper'].includes(CFG.cmp)?520:470,CFG.cmpPop.length>6?78:96,t,C.cmpWord+0.15,{life:1.2,rot:0.1,fill:'#fff'})}
   else if(t<C.s6){// S5: globe + % bar
     clear3d();setBG('space');flash(t,C.and,0.15);globe(t,1,seg(t,C.pctWord,C.pctWord+1.4));
     const a=easeOut(seg(t,C.pctWord,C.pctWord+0.3));g.save();g.globalAlpha=a;const s=backOut(seg(t,C.pctWord,C.pctWord+0.35));g.translate(W/2,250);g.scale(s,s);panel(0,0,700,170,'rgba(10,12,25,0.88)','#FFD23F');txt(CFG.pctText,0,-14,104,{stroke:0,fill:'#FFD23F'});txt('OF THE WAY AROUND',0,58,36,{stroke:0});g.restore();

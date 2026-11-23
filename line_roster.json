@@ -164,7 +164,57 @@
   "notshiho-428",
   "ณัฐณันร์สฤษฏ์วงศ์-ฑ1ภ",
   "SharinaHolman-w8e",
-  "geodude87-h4q"
+  "geodude87-h4q",
+  "epicsnail2727",
+  "OMEGAFLOWERY-n5b",
+  "baynach_photography",
+  "Bennett-11215",
+  "BeautyOtanes",
+  "WaylonPriddy",
+  "KRYPT-y1p",
+  "kathleenramirez7158",
+  "rizzlr-crazy",
+  "Migue-w3c",
+  "AntonisMargetas",
+  "LaithAli-b1c",
+  "Throywood-BG-1900",
+  "pawlitolodz",
+  "OmarElsnaih",
+  "ZEROO-whx",
+  "Mr.Stopmotion-p7l",
+  "ArumugamLK",
+  "Dolis_that_guy",
+  "PremalathaPrema-k6t",
+  "MADshorts27",
+  "shanastull3897",
+  "sandeepbanerji6478",
+  "VILI-t8o",
+  "Mr.Blue_VR",
+  "kinjalparekh5120",
+  "MadeleineWachter",
+  "JessieCañete-j7p",
+  "LawkKarwan-s9b",
+  "bandanabasak7654",
+  "THEONEPIECEISREAL-f5m",
+  "hmmwhattoputhere2571",
+  "WhitneyCamm",
+  "maycherry5246",
+  "slopvv",
+  "AnathBandhuChakraborty-u9c",
+  "Miggy404",
+  "Ten2win-kj",
+  "AngieLopez-ct6dn",
+  "TNTechno7",
+  "ShakuntalaSudhakar-n7q",
+  "ZiqriZiwru-f2d",
+  "Ilikedogs-m9b",
+  "rindyrhodes107",
+  "Michaelissotuf",
+  "JonathanEverett-m4z",
+  "biancahernandez9386",
+  "Coolgrape-k9c",
+  "micahsuniverse2016",
+  "MikeElliott-c6j"
  ],
  "instagram": [
   "amii.ne_op",
@@ -189,7 +239,9 @@
   "nolan_harrison10",
   "tann_tann007",
   "rileyg007",
-  "muhammadmujahed_15"
+  "muhammadmujahed_15",
+  "4prince._.milo",
+  "munir_mazloum_"
  ],
  "tiktok": [],
  "facebook": [],
@@ -235,6 +287,18 @@
    "handle": "WESTSIDEDOGGWIDIT",
    "date": "2026-11-22",
    "reason": "possible celebrity reference - skipped per \"when unsure, skip\""
+  },
+  {
+   "platform": "youtube",
+   "handle": "akFinanceDaily",
+   "date": "2026-11-23",
+   "reason": "looks like a finance/promo channel (spam-like) - skipped per \"when unsure, skip\""
+  },
+  {
+   "platform": "youtube",
+   "handle": "DrPepLovers2",
+   "date": "2026-11-23",
+   "reason": "brand name in handle (possible brand impersonation) - skipped per \"when unsure, skip\""
   }
  ],
  "_leaders": {
@@ -247,6 +311,10 @@
    {
     "date": "2026-11-22",
     "handle": "AndrewPlayz7"
+   },
+   {
+    "date": "2026-11-23",
+    "handle": "WaylonPriddy"
    }
   ],
   "instagram": [
@@ -257,6 +325,10 @@
    {
     "date": "2026-11-22",
     "handle": "nolan_harrison10"
+   },
+   {
+    "date": "2026-11-23",
+    "handle": "munir_mazloum_"
    }
   ],
   "tiktok": [],

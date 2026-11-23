@@ -36,3 +36,9 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - Owner did NOT like the "wall of names" (rows of pills with lines down to the crowd). Replaced with `headTags()`: every name floats directly above ITS OWN figure (NAMES[i] → figure i+1), short white stem to the head, neighbours alternate high/low, long handles shrink (min 30px) instead of overlapping. Today's leader = gold pill + "👑 LINE LEADER" on figure 1.
 - S6 camera now glides SIDE-ON along the line (cam x=5, y=1.2), starting centered on the leader during "Today's line leader is…", panning back through the joiners until "hit", then eases to CAM0 for the loop. Trees between camera and line are auto-hidden.
 - S3 shows NO name tags anymore (keeps the length counter clean). Don't bring back the old `nameTags()` rows.
+
+## Added Day 5 (2026-11-23)
+- New comparison: `skyscraper` (simple original stepped supertall tower; cmpFrac = line/828 m for the Burj Khalifa). `everest` works for any mountain (cmpRef names it, e.g. Kilimanjaro); `field` works for fractions of a field (goal line → goal line = 91.44 m).
+- 2D leader face supports `hardhat`.
+- headTags(): the leader's "👑 LINE LEADER" pill is now part of its collision box (it used to touch the 2nd name tag).
+- The digit-word timing fix is NOT in build.py: apply it to words_raw.json yourself before building (number word end → next.end-0.35 when the next word is > 0.6 s).
