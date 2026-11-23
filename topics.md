@@ -67,3 +67,4 @@ Format: - Question (category) [date/slot]
 - Could a dog really rescue you at sea like in GTA 6? (pop culture + GTA 6) [scheduled 2026-11-23 10:49] [YT 10:53]
 - What would happen if you went to space without a spacesuit? (crazy what-if) [scheduled 2026-11-23 14:05]
 <!-- 2026-11-23 1 AM run: YouTube 10:53 = dog rescue [YT] (GTA spotlight + this week's #1 GTA-animals meme + most varied staging: boat, helicopter jumps, beach, towing). Non-YouTube morning videos for the 10 AM run's pick: gaming eyes, space no suit. 2 GTA shorts done today (quota met). Day still needs: 1 body/everyday (non-GTA), 1 crazy what-if, 1 wildcard (e.g. turkey fly, see your breath, cats knead, Black Friday money). Bodies: examples/shorts_1123/. -->
+- Could the animals of GTA 6 actually kill you? (long-form, pop culture / GTA 6 animals) [scheduled 2026-11-23 18:00, YouTube video + Facebook] — 4:41, 6 chapters + verdict (gator, python, shark, cat, bees, Bigfoot); bodies in examples/animals_long/

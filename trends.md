@@ -211,7 +211,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 
 Prioritize Facebook. Give YouTube a punchy title and thumbnail.
 
-- **A. Could the animals of GTA 6 actually kill you?** Real Florida wildlife science. Rides trend #2. Chapters:
+- ✅ **A. Could the animals of GTA 6 actually kill you?** (long-form 2026-11-23) Real Florida wildlife science. Rides trend #2. Chapters:
   1. Alligators: bite force vs. the weak jaw-opening muscles, and how fast they are on land.
   2. Pythons: the Everglades invasion and how constriction works.
   3. Sharks.
