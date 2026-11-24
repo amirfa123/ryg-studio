@@ -47,3 +47,9 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - 2D leader face supports `chefhat` (outfit `{chefhat:1}`).
 - `sky` pop word moves up to y 560 when the plane/balloon is drawn high (cmpFrac > ~1.5) so it doesn't cover the altitude label.
 - Counts note: Metricool's newest date may have only YouTube filled (IG/FB/TT null) — take each metric's most recent non-null value.
+
+## Changed 2026-11-24 (owner: "add every single comment")
+- Everyone who comments is added (only skip our own accounts + slurs/explicit sexual words). Pull Windsor comments with `last_30dT` (its date filter is the VIDEO's publish date).
+- Display list = [today's leader] + up to 60 people not yet in `_featured` (oldest-joined first). `nShow` = whole list; the glide speeds up to fit. After posting, add shown handles to `_featured`.
+- Arabic/Thai handles now render: Noto Sans Arabic/Thai are npm deps (`npm install`), loaded via FontFace at the top of body.js; font stack `Inter, NotoAr, NotoThai`.
+- CTA: "Subscribe (YouTube) / Follow and comment to join the line!" — we cannot verify who follows, so never say we check.

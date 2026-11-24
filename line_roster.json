@@ -1,5 +1,5 @@
 {
- "_note": "Commenters who joined the follower line. One list per platform, in join order. Append new unique handles each day (never remove unless offensive). Facebook not connected in Windsor yet.",
+ "_note": "Everyone who comments joins (owner rule 2026-11-24). Only skip our own accounts and handles containing slurs or explicit sexual words. _featured = handles already shown with a name tag in a video (per platform); show un-featured people first.",
  "youtube": [
   "amirelates",
   "HappyMealidk",
@@ -235,7 +235,14 @@
   "Nathan-u7m9h",
   "JacobJones-e4l",
   "Ryker-j3y",
-  "TAMIR-x2p"
+  "TAMIR-x2p",
+  "neymarsupport",
+  "it-didnt-let-me-put-blitzø",
+  "Duckfart4532",
+  "USAF-z3u",
+  "WESTSIDEDOGGWIDIT",
+  "akFinanceDaily",
+  "DrPepLovers2"
  ],
  "instagram": [
   "amii.ne_op",
@@ -273,64 +280,17 @@
   "anniee.0211",
   "hi_imjacobk",
   "doubiwthcc_",
-  "maxim.goh"
+  "maxim.goh",
+  "incarnation_of_hatred"
  ],
  "tiktok": [],
  "facebook": [],
  "_skipped": [
   {
-   "platform": "instagram",
-   "handle": "incarnation_of_hatred",
-   "date": "2026-11-20",
-   "reason": "edgy word in handle - skipped per \"when unsure, skip\"; owner can add manually"
-  },
-  {
    "platform": "tiktok",
    "handle": "yellowroundguy",
    "date": "2026-11-20",
    "reason": "our own account"
-  },
-  {
-   "platform": "youtube",
-   "handle": "neymarsupport",
-   "date": "2026-11-21",
-   "reason": "references a real celebrity's name (possible impersonation) - skipped per \"when unsure, skip\"; owner can add manually"
-  },
-  {
-   "platform": "youtube",
-   "handle": "it-didnt-let-me-put-blitzø",
-   "date": "2026-11-22",
-   "reason": "references a cartoon character name / unusual characters - skipped per \"when unsure, skip\""
-  },
-  {
-   "platform": "youtube",
-   "handle": "Duckfart4532",
-   "date": "2026-11-22",
-   "reason": "crude word in handle - skipped per \"when unsure, skip\""
-  },
-  {
-   "platform": "youtube",
-   "handle": "USAF-z3u",
-   "date": "2026-11-22",
-   "reason": "looks like a real organization (US Air Force) - possible impersonation, skipped"
-  },
-  {
-   "platform": "youtube",
-   "handle": "WESTSIDEDOGGWIDIT",
-   "date": "2026-11-22",
-   "reason": "possible celebrity reference - skipped per \"when unsure, skip\""
-  },
-  {
-   "platform": "youtube",
-   "handle": "akFinanceDaily",
-   "date": "2026-11-23",
-   "reason": "looks like a finance/promo channel (spam-like) - skipped per \"when unsure, skip\""
-  },
-  {
-   "platform": "youtube",
-   "handle": "DrPepLovers2",
-   "date": "2026-11-23",
-   "reason": "brand name in handle (possible brand impersonation) - skipped per \"when unsure, skip\""
   }
  ],
  "_leaders": {
@@ -371,6 +331,12 @@
     "handle": "maxim.goh"
    }
   ],
+  "tiktok": [],
+  "facebook": []
+ },
+ "_featured": {
+  "youtube": [],
+  "instagram": [],
   "tiktok": [],
   "facebook": []
  }

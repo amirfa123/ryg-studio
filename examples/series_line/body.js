@@ -1,5 +1,7 @@
 // ===== DAILY SERIES: "Day N of putting my followers in a single-file line around the world" =====
 // Needs CFG defined before this file (see series_line/README.md). Uses w_lib.js helpers.
+// non-Latin handles (Arabic/Thai) need real fonts — loaded from node_modules (npm i installs them)
+for(const [fam,f] of [['NotoAr','noto-sans-arabic/files/noto-sans-arabic-arabic-800-normal.woff2'],['NotoThai','noto-sans-thai/files/noto-sans-thai-thai-800-normal.woff2']]){try{const ff=new FontFace(fam,`url(../node_modules/@fontsource/${f})`,{weight:'800'});document.fonts.add(ff);await ff.load()}catch(e){}}
 const TT=CFG.TT;
 const WD=RAWW.map(w=>w.w.replace(/[^A-Za-z']/g,'').toLowerCase());
 const cue=(w,from=0)=>{for(let i=from;i<RAWW.length;i++)if(WD[i]===w)return RAWW[i];return null};
@@ -8,7 +10,7 @@ C.cmpWord=RAWW[WD.indexOf('and')-1].st;  // last word of the comparison (Manhatt
 C.pctWord=RAWW[WD.indexOf('only')+1].st;
 {const io=WD.indexOf('only');let ia=io;while(ia<WD.length&&WD[ia]!=='around')ia++;C.s6=RAWW[Math.min(ia+1,RAWW.length-1)].st;}  // first word after "...of the way around."
 C.cta=(cue('comment')||cue('hit')).st;
-const NAMES=(CFG.names||[]).slice(-25);  // this platform's newest joiners (join order; NAMES[0] shown at the front)
+const NAMES=(CFG.names||[]).slice(0,61);  // this platform's newest joiners (join order; NAMES[0] shown at the front)
 guy.outfit(CFG.outfit||{crown:1,chain:1});const OUT=CFG.outfit||{crown:1};
 // ---------- 3D line scene ----------
 const L=(()=>{const S=new THREE.Scene();lights(S);S.fog=new THREE.Fog(0xCDEBFF,25,150);const o={S};
@@ -219,7 +221,7 @@ function cmpSkyscraper(t,k){// vertical: simple original stepped supertall tower
 const CMP={tennis:cmpTennis,field:cmpField,marathon:cmpMarathon,island:cmpIsland,everest:cmpEverest,pyramid:cmpPyramid,channel:cmpChannel,whale:cmpWhale,trench:cmpTrench,bus:cmpBus,obelisk:cmpObelisk,sky:cmpSky,bowling:cmpBowling,tower:cmpTower,skyscraper:cmpSkyscraper};
 // --- commenter name tags above the 3D line (this platform's commenters only) ---
 const _v3=new THREE.Vector3();
-function tagPill(s,x,y,fs,o={}){g.save();g.font=`800 ${fs}px Inter`;const w=g.measureText(s).width+fs*1.0,h=fs*1.6;
+function tagPill(s,x,y,fs,o={}){g.save();g.font=`800 ${fs}px Inter, NotoAr, NotoThai`;const w=g.measureText(s).width+fs*1.0,h=fs*1.6;
   g.fillStyle='rgba(0,0,0,0.28)';rr(x-w/2+3,y-h/2+6,w,h,h/2);g.fill();g.fillStyle=o.bg||'#fff';rr(x-w/2,y-h/2,w,h,h/2);g.fill();g.strokeStyle=o.edge||'#111';g.lineWidth=3;if(o.dash)g.setLineDash([8,6]);g.stroke();g.setLineDash([]);
   g.fillStyle=o.fg||'#14141c';g.textAlign='center';g.textBaseline='middle';g.fillText(s,x,y+fs*0.05);g.restore();return w}
 function nameTags(t,a,yTop){if(a<=0)return;const list=NAMES.length?NAMES.map(n=>'@'+n.replace(/^@/,'')):[null];g.save();g.globalAlpha=Math.min(1,a);
@@ -259,7 +261,7 @@ function headTags(t,a){if(a<=0)return;const list=NAMES.length?NAMES.map(n=>'@'+n
     items.push({s,i,hx:(_v3.x+1)/2*W,hy:(1-_v3.y)/2*H,d})});
   items.sort((p,q)=>q.d-p.d);// far first, near on top
   const placed=[];
-  for(const it of items){const lbl=it.s===null?'@YOUR_NAME?':it.s;let fs=clamp(Math.round(240/it.d),36,50);g.font=`800 ${fs}px Inter`;while(fs>30&&g.measureText(lbl).width+fs>540){fs-=2;g.font=`800 ${fs}px Inter`}const w=g.measureText(lbl).width+fs*1.0,h=fs*1.6;
+  for(const it of items){const lbl=it.s===null?'@YOUR_NAME?':it.s;let fs=clamp(Math.round(240/it.d),36,50);g.font=`800 ${fs}px Inter, NotoAr, NotoThai`;while(fs>30&&g.measureText(lbl).width+fs>540){fs-=2;g.font=`800 ${fs}px Inter, NotoAr, NotoThai`}const w=g.measureText(lbl).width+fs*1.0,h=fs*1.6;
     let lift=fs*1.15+(it.i%2)*fs*1.75;let cx=clamp(it.hx,w/2+12,W-w/2-12),ty=it.hy-lift;
     const ex=(it.i===0||it.s===null)?fs*1.85:0;// leader/open tag has a 2nd pill above it: include it in the collision box
     const box=()=>({x:cx,t:ty-h/2-ex,b:ty+h/2,w});const hit=()=>{const B=box();return placed.some(r=>Math.abs(r.x-B.x)<(r.w+B.w)/2+6&&B.t<r.b+4&&B.b>r.t-4)};
@@ -317,7 +319,7 @@ window.render=function(t){g.clearRect(0,0,W,H);hideProps();
     pctBar(t,a,1215);comic('BRUH.',W*0.25,560,96,t,C.s6-1.1,{life:1.2,rot:-0.1,fill:'#fff'})}
   else{// S6: camera glides down the line, every commenter's name pinned over their own little person; then back to opening (loop)
     const u=t-TT,cheer=1-ease(seg(t,TT-1.0,TT-0.2));
-    const nShow=Math.min(Math.max(NAMES.length,1),Math.floor((C.hit-C.s6)*2.6/L.SP)+3);const zEnd=L.pos(nShow)[1]+1.2;
+    const nShow=Math.max(NAMES.length,1);const zEnd=L.pos(nShow)[1]+1.2;
     const z0=L.pos(1)[1]-0.15,kp=ease(seg(t,C.s6,C.hit-0.15)),zc=lerp(z0,Math.min(z0,zEnd-0.6),kp);
     const glide={p:[5.0,1.2,zc+0.2],l:[0,0.7,zc]};
     const kb=ease(seg(t,C.hit-0.15,TT-0.15));const cam={p:mix(glide.p,CAM0.p,kb),l:mix(glide.l,CAM0.l,kb)};
