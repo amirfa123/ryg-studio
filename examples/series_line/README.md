@@ -42,3 +42,8 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - 2D leader face supports `hardhat`.
 - headTags(): the leader's "👑 LINE LEADER" pill is now part of its collision box (it used to touch the 2nd name tag).
 - The digit-word timing fix is NOT in build.py: apply it to words_raw.json yourself before building (number word end → next.end-0.35 when the next word is > 0.6 s).
+
+## Added Day 6 (2026-11-24)
+- 2D leader face supports `chefhat` (outfit `{chefhat:1}`).
+- `sky` pop word moves up to y 560 when the plane/balloon is drawn high (cmpFrac > ~1.5) so it doesn't cover the altitude label.
+- Counts note: Metricool's newest date may have only YouTube filled (IG/FB/TT null) — take each metric's most recent non-null value.
