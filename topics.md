@@ -72,3 +72,7 @@ Format: - Question (category) [date/slot]
 - Why do you always have room for dessert? (body/everyday) [scheduled 2026-11-23 16:52]
 - Can a turkey actually fly? (wildcard/animals) [scheduled 2026-11-23 20:09]
 <!-- 2026-11-23 10 AM run: YouTube best-1 = Moon crash at 18:54 [YT] (no early Metricool data yet for the morning's gaming-eyes/space reels; picked for the biggest wow visuals (tidal wave, Roche diagram, ringed Earth, meteor sky) and to avoid a second GTA upload right after the 18:00 GTA animals long-form). Day total on YouTube shorts: 3 (dog rescue 10:53, follower line 12:23, moon 18:54). Day mix: 2 body (eyes, dessert), 2 GTA (eyes, dog), 2 what-if (space, moon), 1 wildcard (turkey). Bodies: examples/shorts_1123b/. -->
+- Why do songs get stuck in your head? (body/everyday) [scheduled 2026-11-24 07:50]
+- Could a scooter really fly like those GTA 6 glitch clips? (crazy what-if + GTA 6) [scheduled 2026-11-24 10:49] [YT 10:52]
+- What would happen if you trained in 100 times gravity like in Dragon Ball? (pop culture / crazy what-if) [scheduled 2026-11-24 14:03]
+<!-- 2026-11-24 1 AM run: YouTube 10:52 = scooter fly [YT] (GTA spotlight + biggest wow visual: 12 m² delta wing over the road, night flight). Non-YouTube morning videos for the 10 AM run's pick: earworm, 100x gravity. Only 1 GTA short so far today: the 10 AM run needs 1 more GTA 6 short, plus 1 body/everyday and 1 wildcard (e.g. see your breath, cats knead, Black Friday money, runny nose). Gravity voice was sped up 1.08x (atempo) to fit 21.6 s. Bodies: examples/shorts_1124/. -->

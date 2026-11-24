@@ -137,7 +137,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
    - Real lifeguard dogs (big water breeds like Newfoundlands) are trained to tow swimmers to shore.
    - In Italy they even jump from helicopters.
    - Stand-in: a generic dog with shades.
-2. **What would it take for a scooter to fly like the GTA 6 glitch?** — pop culture + GTA 6 (#gta6)
+2. ✅ **What would it take for a scooter to fly like the GTA 6 glitch?** — pop culture + GTA 6 (#gta6)
    - Lift needs speed and wing area.
    - To lift ~150 kg at 50 km/h, you'd need a wing roughly the size of a hang glider (~12 m²).
 3. **How long is 125 million hours (the time people spent watching GTA 6 streams in one day)?** — pop culture + GTA 6 (#gta6)
@@ -151,7 +151,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 6. **How far could you really shoot an arrow in the Hunger Games?** — pop culture (#hungergames)
    - A modern bow fires an arrow at ~90–100 m/s.
    - Olympic targets are at 70 m, but the flight record (with a foot bow) is over 1.8 km.
-7. **What would happen if you trained in 100× gravity like in Dragon Ball?** — pop culture (#dragonball)
+7. ✅ **What would happen if you trained in 100× gravity like in Dragon Ball?** — pop culture (#dragonball)
    - A 70 kg person would weigh 7 tonnes.
    - Your heart couldn't pump blood up to your brain; untrained people black out at around 5 g.
    - Stand-in: generic spiky-haired fighter, no copied designs.
@@ -168,7 +168,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 10. ✅ **Why do your eyes hurt after gaming all day?** — body + GTA 6 tie-in (#eyes)
     - When you stare at a screen, your blinking drops by about half, so your eyes dry out.
     - Focusing at one distance for hours also tires the focusing muscles.
-11. **Why do songs get stuck in your head?** — body (#earworm, rides the Mariah Christmas takeover)
+11. ✅ **Why do songs get stuck in your head?** — body (#earworm, rides the Mariah Christmas takeover)
     - Over 90% of people get an "earworm" at least weekly.
     - Your brain replays unfinished, catchy loops.
 12. ✅ **Why do you always have room for dessert?** — body (#thanksgiving)
