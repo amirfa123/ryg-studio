@@ -142,7 +142,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
    - To lift ~150 kg at 50 km/h, you'd need a wing roughly the size of a hang glider (~12 m²).
 3. **How long is 125 million hours (the time people spent watching GTA 6 streams in one day)?** — pop culture + GTA 6 (#gta6)
    - That's about 14,000 years of non-stop watching, back to the end of the last Ice Age.
-4. **Do snakes really unhinge their jaws, like the GTA 6 pet snake?** — pop culture + GTA 6 / animals (#gta6)
+4. ✅ **Do snakes really unhinge their jaws, like the GTA 6 pet snake?** — pop culture + GTA 6 / animals (#gta6)
    - They don't unhinge them.
    - The two halves of the lower jaw aren't fused, so they stretch apart on a stretchy ligament and "walk" the prey in.
 5. **How strong is an alligator's bite (the thing eating everyone in GTA 6)?** — pop culture + GTA 6 / animals (#gta6)
@@ -173,7 +173,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
     - Your brain replays unfinished, catchy loops.
 12. ✅ **Why do you always have room for dessert?** — body (#thanksgiving)
     - "Sensory-specific satiety": you get bored of one flavor, but a new taste resets your appetite.
-13. **Why does your nose run when it's cold?** — body (#cold)
+13. ✅ **Why does your nose run when it's cold?** — body (#cold)
     - Your nose warms and wets cold, dry air.
     - It overproduces mucus, and warm breath condenses at the tip.
 14. **Why do you get butterflies in your stomach?** — body (#butterflies, rides "My Moon My Man")
@@ -199,7 +199,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 19. **Why can you see your breath in winter?** — wildcard/everyday (#winter)
     - Your breath is full of warm water vapor.
     - Cold air makes it condense into a tiny cloud, the same way clouds form.
-20. **How much would it cost to buy everything on Black Friday?** — wildcard/money (#blackfriday)
+20. ✅ **How much would it cost to buy everything on Black Friday?** — wildcard/money (#blackfriday)
     - US shoppers spend around $10B+ online in a single day. Verify the 2026 figure.
     - Cash-stack comparison against buildings.
     - Keep it light, no store logos.
