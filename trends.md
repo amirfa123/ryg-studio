@@ -221,7 +221,7 @@ Prioritize Facebook. Give YouTube a punchy title and thumbnail.
   7. Verdict.
 
   Original animals and generic swamp/city only.
-- **B. What would happen if you trained like a Dragon Ball fighter?** Chapters:
+- ✅ **B. What would happen if you trained like a Dragon Ball fighter?** (long-form 2026-11-25) Chapters:
   1. 100× gravity rooms.
   2. How strong humans can really get.
   3. Max punch speed.
