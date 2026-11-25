@@ -53,3 +53,9 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - Display list = [today's leader] + up to 60 people not yet in `_featured` (oldest-joined first). `nShow` = whole list; the glide speeds up to fit. After posting, add shown handles to `_featured`.
 - Arabic/Thai handles now render: Noto Sans Arabic/Thai are npm deps (`npm install`), loaded via FontFace at the top of body.js; font stack `Inter, NotoAr, NotoThai`.
 - CTA: "Subscribe (YouTube) / Follow and comment to join the line!" — we cannot verify who follows, so never say we check.
+
+## Added Day 7 (2026-11-25)
+- New comparison: `hoops` (basketball court, NBA 28.65 m baseline→baseline; cmpFrac = line/28.65).
+- `island` now supports cmpFrac > 1 (island shrinks about its south tip, dots run past the north tip; pop word moves left).
+- 2D leader face supports `bandana` (red, outfit `{bandana:1,shades:1}`).
+- `_featured` started today (it was empty): YT shows the oldest 60 un-featured joiners, IG all 45.
