@@ -140,7 +140,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 2. ✅ **What would it take for a scooter to fly like the GTA 6 glitch?** — pop culture + GTA 6 (#gta6)
    - Lift needs speed and wing area.
    - To lift ~150 kg at 50 km/h, you'd need a wing roughly the size of a hang glider (~12 m²).
-3. **How long is 125 million hours (the time people spent watching GTA 6 streams in one day)?** — pop culture + GTA 6 (#gta6)
+3. ✅ **How long is 125 million hours (the time people spent watching GTA 6 streams in one day)?** — pop culture + GTA 6 (#gta6)
    - That's about 14,000 years of non-stop watching, back to the end of the last Ice Age.
 4. ✅ **Do snakes really unhinge their jaws, like the GTA 6 pet snake?** — pop culture + GTA 6 / animals (#gta6)
    - They don't unhinge them.
@@ -196,14 +196,14 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 18. ✅ **Can a turkey actually fly?** — wildcard/animals (#turkey, Thanksgiving week)
     - Wild turkeys can burst-fly at around 80–90 km/h.
     - Farm turkeys are bred too heavy to get off the ground.
-19. **Why can you see your breath in winter?** — wildcard/everyday (#winter)
+19. ✅ **Why can you see your breath in winter?** — wildcard/everyday (#winter)
     - Your breath is full of warm water vapor.
     - Cold air makes it condense into a tiny cloud, the same way clouds form.
 20. ✅ **How much would it cost to buy everything on Black Friday?** — wildcard/money (#blackfriday)
     - US shoppers spend around $10B+ online in a single day. Verify the 2026 figure.
     - Cash-stack comparison against buildings.
     - Keep it light, no store logos.
-21. **Why do cats knead you with their paws?** — wildcard/animals (#cat, the cats short did well on FB)
+21. ✅ **Why do cats knead you with their paws?** — wildcard/animals (#cat, the cats short did well on FB)
     - It's leftover kitten behavior from nursing.
     - Scent glands in their paws mark you as "theirs".
 
