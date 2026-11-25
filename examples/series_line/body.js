@@ -2,7 +2,7 @@
 // Needs CFG defined before this file (see series_line/README.md). Uses w_lib.js helpers.
 // non-Latin handles (Arabic/Thai) need real fonts — loaded from node_modules (npm i installs them)
 for(const [fam,f] of [['NotoAr','noto-sans-arabic/files/noto-sans-arabic-arabic-800-normal.woff2'],['NotoThai','noto-sans-thai/files/noto-sans-thai-thai-800-normal.woff2']]){try{const ff=new FontFace(fam,`url(../node_modules/@fontsource/${f})`,{weight:'800'});document.fonts.add(ff);await ff.load()}catch(e){}}
-const TT=CFG.TT;
+let TT=CFG.TT;
 const WD=RAWW.map(w=>w.w.replace(/[^A-Za-z']/g,'').toLowerCase());
 const cue=(w,from=0)=>{for(let i=from;i<RAWW.length;i++)if(WD[i]===w)return RAWW[i];return null};
 const C={there:cue('there').st,num:RAWW[WD.indexOf('are')+1].st,which:cue('which').st,thats:cue("that's").st,and:cue('and').st,hit:cue('hit').st};
@@ -10,7 +10,15 @@ C.cmpWord=RAWW[WD.indexOf('and')-1].st;  // last word of the comparison (Manhatt
 C.pctWord=RAWW[WD.indexOf('only')+1].st;
 {const io=WD.indexOf('only');let ia=io;while(ia<WD.length&&WD[ia]!=='around')ia++;C.s6=RAWW[Math.min(ia+1,RAWW.length-1)].st;}  // first word after "...of the way around."
 C.cta=(cue('comment')||cue('hit')).st;
-const NAMES=(CFG.names||[]).slice(0,61);  // this platform's newest joiners (join order; NAMES[0] shown at the front)
+const NAMES=[...new Set((CFG.names||[]).map(n=>n.replace(/^@/,'')))].slice(0,400);  // [leader, ...new (never shown before), ...already-shown]
+// ---- ROLL CALL PACING (owner 2026-11-25): slow on NEW names so everyone can read theirs, quick whoosh past already-shown ones ----
+const N_NEW=Math.min(NAMES.length,Math.max(1,CFG.nNew??NAMES.length));  // count incl. leader
+const PACE_LEAD=1.4,PACE_NEW=0.36,PACE_OLD=0.07;   // seconds per figure
+const PACE=i=>i===0?PACE_LEAD:(i<N_NEW?PACE_NEW:PACE_OLD);
+const ROLL=(()=>{let s=0;for(let i=0;i<Math.max(1,NAMES.length);i++)s+=PACE(i);return s})();
+TT=Math.max(TT,C.s6+ROLL+1.6);window.TT_OUT=TT;   // video grows to fit the roll call; read window.TT_OUT for the frame count
+// figure index (float) reached at time tau seconds into the roll call
+function rollIdx(tau){let acc=0;for(let i=0;i<Math.max(1,NAMES.length);i++){const p=PACE(i);if(tau<acc+p)return i+(tau-acc)/p;acc+=p}return Math.max(0,NAMES.length-1)}
 guy.outfit(CFG.outfit||{crown:1,chain:1});const OUT=CFG.outfit||{crown:1};
 // ---------- 3D line scene ----------
 const L=(()=>{const S=new THREE.Scene();lights(S);S.fog=new THREE.Fog(0xCDEBFF,25,150);const o={S};
@@ -331,11 +339,10 @@ window.render=function(t){g.clearRect(0,0,W,H);hideProps();
     pctBar(t,a,1215);comic('BRUH.',W*0.25,560,96,t,C.s6-1.1,{life:1.2,rot:-0.1,fill:'#fff'})}
   else{// S6: camera glides down the line, every commenter's name pinned over their own little person; then back to opening (loop)
     const u=t-TT,cheer=1-ease(seg(t,TT-1.0,TT-0.2));
-    const nShow=Math.max(NAMES.length,1);const zEnd=L.pos(nShow)[1]+1.2;
-    const z0=L.pos(1)[1]-0.15,kp=ease(seg(t,C.s6,C.hit-0.15)),zc=lerp(z0,Math.min(z0,zEnd-0.6),kp);
+    const gEnd=C.s6+ROLL,ri=rollIdx(clamp(t-C.s6,0,ROLL)),zc=L.pos(1)[1]-0.15-ri*L.SP;
     const glide={p:[5.0,1.2,zc+0.2],l:[0,0.7,zc]};
-    const kb=ease(seg(t,C.hit-0.15,TT-0.15));const cam={p:mix(glide.p,CAM0.p,kb),l:mix(glide.l,CAM0.l,kb)};
+    const kb=ease(seg(t,gEnd,TT-0.15));const cam={p:mix(glide.p,CAM0.p,kb),l:mix(glide.l,CAM0.l,kb)};
     lineScene(u,cam,{armL:[lerp(0.3+0.03*Math.sin(u*2),2.7+0.25*Math.sin(t*12),cheer),0.2*cheer],armR:[lerp(0.3+0.03*Math.sin(u*2+1),2.7+0.25*Math.cos(t*12),cheer),-0.2*cheer],mouth:cheer>0.5?'grin':'smile',jump:cheer>0?0.06*cheer*Math.abs(Math.sin(t*9)):0.012*Math.sin(u*2.4),blink:BLINK(u),bendL:0.3*cheer,bendR:0.3*cheer});
-    headTags(t,easeOut(seg(t,C.s6,C.s6+0.4))*(1-seg(t,C.hit,C.hit+0.45)));
-    flash(t,C.s6,0.15);pill('COMMENT TO JOIN THE LINE!',W/2,330,60,'#fff','#111',t,C.cta,C.hit+0.05);pill('HIT '+CFG.cta+'!',W/2,330,74,'#FF3D7F','#fff',t,C.hit+0.05,TT-0.6);comic('+1',W*0.7,700,110,t,C.hit+0.9,{life:0.8,rot:0.1,fill:'#5BE37A'});comic('+1',W*0.3,640,100,t,C.hit+1.5,{life:0.8,rot:-0.1,fill:'#5BE37A'})}
+    headTags(t,easeOut(seg(t,C.s6,C.s6+0.4))*(1-seg(t,gEnd-0.1,gEnd+0.4)));if(N_NEW>1&&t<gEnd){const a=easeOut(seg(t,C.s6+0.3,C.s6+0.7))*(1-seg(t,gEnd-0.3,gEnd));if(a>0){g.save();g.globalAlpha=a;pill('NEW IN THE LINE: '+(N_NEW-1),W/2,1600,40,'#5BE37A','#111',t,0,1e9);g.restore()}}
+    flash(t,C.s6,0.15);pill('COMMENT TO JOIN THE LINE!',W/2,330,60,'#fff','#111',t,C.cta,C.hit+0.05);pill('HIT '+CFG.cta+'!',W/2,330,74,'#FF3D7F','#fff',t,C.hit+0.05,Math.min(TT-0.6,C.hit+2.2));if(TT-0.6>C.hit+2.6)pill('FIND YOUR NAME! 👀',W/2,330,64,'#FFD23F','#111',t,C.hit+2.3,TT-0.6);comic('+1',W*0.7,700,110,t,C.hit+0.9,{life:0.8,rot:0.1,fill:'#5BE37A'});comic('+1',W*0.3,640,100,t,C.hit+1.5,{life:0.8,rot:-0.1,fill:'#5BE37A'})}
   vignette();captions(t)};
