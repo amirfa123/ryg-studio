@@ -145,7 +145,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 4. ✅ **Do snakes really unhinge their jaws, like the GTA 6 pet snake?** — pop culture + GTA 6 / animals (#gta6)
    - They don't unhinge them.
    - The two halves of the lower jaw aren't fused, so they stretch apart on a stretchy ligament and "walk" the prey in.
-5. **How strong is an alligator's bite (the thing eating everyone in GTA 6)?** — pop culture + GTA 6 / animals (#gta6)
+5. ✅ **How strong is an alligator's bite (the thing eating everyone in GTA 6)?** — pop culture + GTA 6 / animals (#gta6)
    - Around 2,000+ psi, one of the strongest bites measured.
    - But the muscles that OPEN the jaw are so weak that a rubber band can hold it shut.
 6. **How far could you really shoot an arrow in the Hunger Games?** — pop culture (#hungergames)
@@ -176,7 +176,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 13. ✅ **Why does your nose run when it's cold?** — body (#cold)
     - Your nose warms and wets cold, dry air.
     - It overproduces mucus, and warm breath condenses at the tip.
-14. **Why do you get butterflies in your stomach?** — body (#butterflies, rides "My Moon My Man")
+14. ✅ **Why do you get butterflies in your stomach?** — body (#butterflies, rides "My Moon My Man")
     - Adrenaline pulls blood away from your gut toward your muscles.
     - Your stomach "flutters" and slows down.
 
@@ -185,7 +185,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
     - You'd stay conscious for about 10–15 s.
     - You wouldn't explode, but your saliva would boil and you'd swell.
     - The "could YOU" angle helps space do better.
-16. **What would happen if Earth had rings like Saturn?** — what-if (#saturn)
+16. ✅ **What would happen if Earth had rings like Saturn?** — what-if (#saturn)
     - They'd arc across the sky as a giant bright band.
     - Their shadow would make some places noticeably colder in winter.
 17. ✅ **What would happen if the Moon crashed into Earth?** — what-if (#moon)
