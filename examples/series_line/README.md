@@ -66,3 +66,8 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - The video now GROWS to fit the roll call: TT = max(voice+0.4, s6 + roll + 1.6). Get it with `node tt.js w_line_<p>/video.html` (prints window.TT_OUT) and use THAT for: frame count (ceil(TT*30)+2), `sfx_line.py … <TT>`, `w_mix.sh … <TT>`. Music loops under the silent roll call; SFX: add a soft pop every ~1 s during the roll call if it's long.
 - During the roll call the top pill reads "FIND YOUR NAME! 👀" and a green "NEW IN THE LINE: N" pill sits low (y 1600).
 - Backlog: `_featured` was reset on 2026-11-24, so the first run after that treats everyone as new (long, slow video on YouTube — that's intended, owner wants everyone to see their name once). After each post, add every shown handle to `_featured`.
+
+## Added Day 8 (2026-11-26)
+- Script order "…Hit follow/subscribe and comment to join the line!" is supported: when "comment" comes after "hit", S6 shows "HIT FOLLOW!" first, then "COMMENT TO JOIN THE LINE!", then "FIND YOUR NAME! 👀".
+- `sfx_line.py` adds a soft pop every ~1 s after the voice ends (long roll calls aren't dead air).
+- Comparisons used: `channel` at cmpFrac < 1 (fraction of the way across), `everest` as Kilimanjaro ×5.25, `tower` ×1.9, `whale` 0.98 — all render fine.

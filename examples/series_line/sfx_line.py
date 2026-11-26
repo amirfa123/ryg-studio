@@ -22,4 +22,8 @@ m.put(whoosh(0.5),s6-0.1,0.4)
 for k in range(4):m.put(pop(700+k*120),s6+0.1+k*0.09,0.3)
 m.put(ding(1175),cta,0.25)
 m.put(whoosh(0.5),hit-0.1,0.4);m.put(pop(1000),hit+0.15,0.35);m.put(ooh(),hit+0.4,0.25);m.put(bloop(1.2),hit+0.9,0.35);m.put(bloop(1.4),hit+1.5,0.35)
+# long roll call (video grew past the voice): soft pop every ~1 s so the silent glide isn't dead air
+t0=max(hit+2.2,W[-1]['end']+0.4)
+k=0
+while t0+k*1.0<TT-1.0:m.put(pop(650+(k%4)*90),t0+k*1.0,0.15);k+=1
 m.save(f'{d}/sfx.wav')
