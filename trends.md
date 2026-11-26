@@ -148,7 +148,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
 5. ✅ **How strong is an alligator's bite (the thing eating everyone in GTA 6)?** — pop culture + GTA 6 / animals (#gta6)
    - Around 2,000+ psi, one of the strongest bites measured.
    - But the muscles that OPEN the jaw are so weak that a rubber band can hold it shut.
-6. **How far could you really shoot an arrow in the Hunger Games?** — pop culture (#hungergames)
+6. ✅ **How far could you really shoot an arrow in the Hunger Games?** — pop culture (#hungergames)
    - A modern bow fires an arrow at ~90–100 m/s.
    - Olympic targets are at 70 m, but the flight record (with a foot bow) is over 1.8 km.
 7. ✅ **What would happen if you trained in 100× gravity like in Dragon Ball?** — pop culture (#dragonball)
