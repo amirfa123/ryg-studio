@@ -1,0 +1,18 @@
+// ===== Chapter 4: the wall of fire (global 143.6 - 176.02) =====
+const T0=143.6,TT=32.42;
+window.render=function(tl){const t=tl;g.clearRect(0,0,W,H);hideProps();hideFX();holder.visible=true;holder.rotation.order='XYZ';const F=scene('forest');forestReset(F);F.tick(t);props.pack.visible=true;
+  if(t<2.7){const x=lerp(-4,0,seg(t,0,2.7));putGuy(F.S,x,0,3,PI/2);guy.pose(walk(t,7));F.shot([x+3,1.8,10.5],[x+1,1.3,0]);chapterCard(t,0.05,2.65,4,'THE WALL OF FIRE')}
+  else if(t<6.2){const k=easeOut(seg(t,2.8,4.6));F.wall.visible=true;F.wall.position.set(0,0,-13);F.wall.scale.set(1,Math.max(0.01,k),1);putGuy(F.S,0,0,3,t<3.6?PI/2:PI);guy.pose(idle(t,{mouth:'o',mouthSize:0.7,wide:true,armL:[0.8,0.4],armR:[0.8,-0.4]}));
+    F.shot([3.5,1.6,11],[0,2.2,-2],k>0.1?'fire':'day');comic('WHOOSH!',W*0.3,H*0.25,120,t,3.0,{life:1.2,rot:-0.1,fill:ORANGE});pill('THE FOREST IS ON FIRE',W*0.62,H*0.14,58,RED,'#fff',t,4.6,6.15);flash(t,2.7,0.15)}
+  else if(t<12.3){clear3d();setBG('red');const a=pop(t,6.6),b=pop(t,8.3);g.save();g.translate(W*0.3,H*0.47);g.scale(a,a);panel(0,0,460,440,'rgba(10,12,25,0.9)',ORANGE,30);g.restore();if(a>0){flame2D(W*0.3,H*0.43,1.7*a,t);txt('FLAMES?',W*0.3,H*0.6,60*a,{sw:12})}
+    g.save();g.translate(W*0.7,H*0.47);g.scale(b,b);panel(0,0,460,440,'rgba(10,12,25,0.9)','#9A9AA6',30);g.restore();if(b>0){smoke2D(W*0.7,H*0.41,1.6*b,t);txt('SMOKE?',W*0.7,H*0.6,60*b,{sw:12})}
+    txtA('WHAT GETS YOU FIRST?',W/2,110,72,pop(t,6.3),{fill:GOLD,sw:14});guessBeat(t,9.8,12.25,W/2,H*0.47);flash(t,6.2,0.15)}
+  else if(t<13.5){clear3d();setBG('red');g.save();g.translate(W*0.3,H*0.47);g.globalAlpha=0.3;panel(0,0,460,440,'rgba(10,12,25,0.9)',ORANGE,30);flame2D(0,-20,1.5,t);g.restore();const s=1+0.08*backOut(seg(t,12.3,12.6));g.save();g.translate(W*0.7,H*0.47);g.scale(s,s);panel(0,0,460,440,'rgba(10,12,25,0.9)',GOLD,30);g.restore();smoke2D(W*0.7,H*0.41,1.6*s,t);txt('SMOKE!',W*0.7,H*0.6,64,{fill:GOLD,sw:12});flash(t,12.3,0.25)}
+  else if(t<18.3){clear3d();setBG('night');const a=pop(t,13.6);lungs2D(W*0.32,H*0.5,3.0*a);if(t>14.6){g.save();g.globalAlpha=0.7*seg(t,14.6,15.6);smoke2D(W*0.32,H*0.42,1.2,t);g.restore()}
+    txtA('REAL HOUSE FIRES:',W*0.67,H*0.32,58,pop(t,13.7),{sw:12});txtA('MOST DEATHS',W*0.67,H*0.46,80,pop(t,14.9),{fill:GOLD,sw:16});txtA('= BREATHING SMOKE',W*0.67,H*0.58,64,pop(t,16.0),{fill:'#BFC3CC',sw:14});txtA('NOT BURNS',W*0.67,H*0.72,60,pop(t,17.0),{fill:RED,sw:14});flash(t,13.5,0.15)}
+  else if(t<20.0){clear3d();setBG('night');smokeDiagram(W/2,H*0.47,1300,640,t);txtA('HOT SMOKE RISES',W/2,100,72,pop(t,18.35),{fill:GOLD,sw:14});flash(t,18.3,0.15)}
+  else if(t<24.8){F.wall.visible=true;F.wall.position.set(0,0,-9);F.wall.scale.set(1,1,1);const x=lerp(-2,5,seg(t,21.8,24.8));putGuy(F.S,x,0,2,PI/2);guy.pose(crouchPose(t,{legL:[0.9+0.3*Math.sin(t*8),1.6,-0.7,0.18],legR:[0.9-0.3*Math.sin(t*8),1.6,-0.7,-0.18],reachL:[0.12,1.52,0.36],reachR:[-0.12,1.52,0.36]}));props.cloth.visible=t>20.9;
+    F.shot([x+1,1.6,9],[x,1.2,0],'fire');smokeDiagram(-999,0,10,10,t);g.save();g.fillStyle='rgba(60,50,50,0.45)';g.fillRect(0,0,W,H*0.35);g.restore();
+    pill('STAY LOW',W*0.15,H*0.82,50,GOLD,'#111',t,20.1,24.75);pill('COVER YOUR MOUTH',W*0.45,H*0.82,50,CYAN,'#111',t,20.9,24.75);pill('MOVE SIDEWAYS',W*0.8,H*0.82,50,GREEN,'#111',t,22.3,24.75);if(t>22.3)arrow(W*0.62,H*0.5,W*0.86,H*0.5,GREEN,22);flash(t,20.0,0.15)}
+  else{clear3d();setBG('linear-gradient(#2A1010 0%,#5A2414 60%,#8A3A1A 100%)');slopeDiagram(W/2,H*0.55,1.25,t,easeOut(seg(t,26.0,30.5)));txtA('NEVER RUN UPHILL AHEAD OF A FIRE',W/2,100,66,pop(t,24.9),{fill:GOLD,sw:14});flash(t,24.8,0.15)}
+  vignette();cap16(t+T0)};
