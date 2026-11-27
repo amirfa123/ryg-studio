@@ -155,7 +155,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
    - A 70 kg person would weigh 7 tonnes.
    - Your heart couldn't pump blood up to your brain; untrained people black out at around 5 g.
    - Stand-in: generic spiky-haired fighter, no copied designs.
-8. **How tall do you have to be to dunk without jumping?** — pop culture (#nba, rides Wemby's 50)
+8. ✅ **How tall do you have to be to dunk without jumping?** — pop culture (#nba, rides Wemby's 50)
    - The rim is 3.05 m.
    - A 2.24 m player's standing reach is close to 3 m, so he's almost there flat-footed. Verify the reach.
    - Unnamed player, plain jersey.
