@@ -71,3 +71,7 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - Script order "…Hit follow/subscribe and comment to join the line!" is supported: when "comment" comes after "hit", S6 shows "HIT FOLLOW!" first, then "COMMENT TO JOIN THE LINE!", then "FIND YOUR NAME! 👀".
 - `sfx_line.py` adds a soft pop every ~1 s after the voice ends (long roll calls aren't dead air).
 - Comparisons used: `channel` at cmpFrac < 1 (fraction of the way across), `everest` as Kilimanjaro ×5.25, `tower` ×1.9, `whale` 0.98 — all render fine.
+
+## Day 9 (2026-11-27)
+- Script ends "…Hit subscribe/follow and comment to join the line!" — keep "Hit" (body.js/sfx_line.py crash without a `hit` cue word).
+- Comparisons: `skyscraper` 0.79, `everest` 1.46, `marathon` 0.73, `tennis` 0.99 — all render fine. Thai/Arabic tags render in the YT roll call.
