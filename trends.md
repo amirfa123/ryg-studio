@@ -159,7 +159,7 @@ Format: question — category (#topic) — science hook. Verify any non-obvious 
    - The rim is 3.05 m.
    - A 2.24 m player's standing reach is close to 3 m, so he's almost there flat-footed. Verify the reach.
    - Unnamed player, plain jersey.
-9. **How do you catch a falling rocket with giant chopsticks?** — pop culture / space (#starship)
+9. ✅ **How do you catch a falling rocket with giant chopsticks?** — pop culture / space (#starship)
    - The ship falls from orbit at ~27,000 km/h.
    - The air does most of the braking, then the engines slow it to near-hover right beside the tower.
    - Generic rocket and tower, no logos.
