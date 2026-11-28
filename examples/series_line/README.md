@@ -81,3 +81,8 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 - `node tt.js w_line_<p>/video.html` now prints JSON: {TT, voSplit, voDelay, rollStart, rollEnd, nNew, paceNew, paceLead}. Use it for: frames = ceil(TT*30)+2; `python3 examples/series_line/sfx_line.py w_line_<p> '<json>'` (adds a soft pop for every new name + light "ooh"s during the roll call); `./w_mix.sh w_line_<p> <TT> <voSplit> <voDelay>` (shifts the voice the same way). Never mix without the split args when voDelay > 0.
 - During the roll call the top pill is "FIND YOUR NAME! 👀"; CTA pills appear only once the CTA voice starts.
 - **No TikTok version anymore** (owner: TikTok isn't growing — save the credits). Make Instagram, Facebook and YouTube only.
+
+## Day 10 (2026-11-28)
+- The 2nd "+1" pop after "hit" could still be on screen in the very last frame (broke the clean loop). Both "+1" comics are now clamped to end before TT (`Math.min(C.hit+…, TT-…)`).
+- Comparisons: `trench` 1.18, `channel` 0.93, `tower` 1.03 (as Tokyo Skytree) — all render fine. YT backlog cleared: 135 new names → 74 s video.
+- Always diff the FULL Windsor list against the roster: 27 YT commenters from 11-21…11-27 had been missed by earlier runs.
