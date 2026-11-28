@@ -75,3 +75,9 @@ Narration cue words the body/SFX look for: "There are <N>", "which", "That's", "
 ## Day 9 (2026-11-27)
 - Script ends "…Hit subscribe/follow and comment to join the line!" — keep "Hit" (body.js/sfx_line.py crash without a `hit` cue word).
 - Comparisons: `skyscraper` 0.79, `everest` 1.46, `marathon` 0.73, `tennis` 0.99 — all render fine. Thai/Arabic tags render in the YT roll call.
+
+## Changed 2026-11-28 (owner: silent ending ruined the loop; drop TikTok from the series)
+- The CTA ("Comment…/Hit…") now plays AFTER the roll call: body splits the voice at the first CTA word and delays the rest (`voSplit`, `voDelay`), so every video ends on the narrator → clean loop. Captions/pills shift automatically.
+- `node tt.js w_line_<p>/video.html` now prints JSON: {TT, voSplit, voDelay, rollStart, rollEnd, nNew, paceNew, paceLead}. Use it for: frames = ceil(TT*30)+2; `python3 examples/series_line/sfx_line.py w_line_<p> '<json>'` (adds a soft pop for every new name + light "ooh"s during the roll call); `./w_mix.sh w_line_<p> <TT> <voSplit> <voDelay>` (shifts the voice the same way). Never mix without the split args when voDelay > 0.
+- During the roll call the top pill is "FIND YOUR NAME! 👀"; CTA pills appear only once the CTA voice starts.
+- **No TikTok version anymore** (owner: TikTok isn't growing — save the credits). Make Instagram, Facebook and YouTube only.

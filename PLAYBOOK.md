@@ -24,7 +24,7 @@ The owner wants GTA 6 as a main spotlight — it's huge with the audience.
 - **IP rules still apply:** you can SAY "GTA 6" in the question/captions/hashtags (#gta6, #gta). Do NOT draw Rockstar/GTA logos or title font, Jason/Lucia or any game characters, the real in-game map, copied HUD/wanted-star UI, or real car brands. Use original stand-ins.
 
 ## 🔁 DAILY SERIES: "Day N of putting my followers in a single-file line around the world"
-Owner's growth series — runs every day from its own scheduled task. **One separate video per platform** (Instagram, Facebook, TikTok, YouTube) because each has a different follower count. Track the day number + counts in `series_line.md`.
+Owner's growth series — runs every day from its own scheduled task. **One separate video per platform — Instagram, Facebook and YouTube only (NO TikTok version since 2026-11-28, owner: save credits)** — because each has a different follower count. Track the day number + counts in `series_line.md`.
 - **Counts:** Metricool getAnalyticsDataByMetrics (brandId 8164865), latest value of: Instagram `IGEV01`, Facebook `FBEV17`, TikTok `TKEV07`, YouTube `YTEV01` (query the last 7 days, take the most recent date).
 - **Math:** each person in line takes **about half a meter** (0.5 m). Line length = followers × 0.5 m. Earth's equator ≈ 40,075 km → it takes ~80 million people to circle the Earth. Show % of the way around.
 - **Comparison:** pick ONE fun, accurate real-world comparison for that platform's length (verify the length with a web search): e.g. ~23 m ≈ a tennis court, ~93 m ≈ an American football field, ~13 km ≈ more than half of Manhattan's length, ~31 km ≈ ¾ of a marathon. Change comparisons as numbers grow; don't repeat the same one two days in a row.

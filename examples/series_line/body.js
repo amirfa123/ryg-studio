@@ -16,7 +16,13 @@ const N_NEW=Math.min(NAMES.length,Math.max(1,CFG.nNew??NAMES.length));  // count
 const PACE_LEAD=1.4,PACE_NEW=0.36,PACE_OLD=0.07;   // seconds per figure
 const PACE=i=>i===0?PACE_LEAD:(i<N_NEW?PACE_NEW:PACE_OLD);
 const ROLL=(()=>{let s=0;for(let i=0;i<Math.max(1,NAMES.length);i++)s+=PACE(i);return s})();
-TT=Math.max(TT,C.s6+ROLL+1.6);window.TT_OUT=TT;   // video grows to fit the roll call; read window.TT_OUT for the frame count
+// ---- CTA AFTER THE ROLL CALL (owner 2026-11-28: silent ending ruined the loop) ----
+// The voice is split at the first CTA word ("Comment…"/"Hit…"); everything from there plays AFTER the roll call,
+// so every video ends on the narrator → clean loop. The mixer must shift the voice the same way (see README / w_mix.sh).
+const VO_SPLIT=Math.min(C.cta,C.hit),VO_DELAY=Math.max(0,C.s6+ROLL+0.35-VO_SPLIT);
+if(VO_DELAY>0){for(const w of RAWW)if(w.st>=VO_SPLIT-0.02){w.st+=VO_DELAY;w.en+=VO_DELAY}for(const c of CH){c.st=c.w[0].st;c.en=c.w[c.w.length-1].en}C.cta+=VO_DELAY;C.hit+=VO_DELAY}
+TT=Math.max(TT+VO_DELAY,C.s6+ROLL+1.6);
+window.TT_OUT=TT;window.SERIES_TIMING={TT,voSplit:VO_SPLIT,voDelay:VO_DELAY,rollStart:C.s6,rollEnd:C.s6+ROLL,nNew:N_NEW,paceNew:PACE_NEW,paceLead:PACE_LEAD};
 // figure index (float) reached at time tau seconds into the roll call
 function rollIdx(tau){let acc=0;for(let i=0;i<Math.max(1,NAMES.length);i++){const p=PACE(i);if(tau<acc+p)return i+(tau-acc)/p;acc+=p}return Math.max(0,NAMES.length-1)}
 guy.outfit(CFG.outfit||{crown:1,chain:1});const OUT=CFG.outfit||{crown:1};
@@ -344,5 +350,5 @@ window.render=function(t){g.clearRect(0,0,W,H);hideProps();
     const kb=ease(seg(t,gEnd,TT-0.15));const cam={p:mix(glide.p,CAM0.p,kb),l:mix(glide.l,CAM0.l,kb)};
     lineScene(u,cam,{armL:[lerp(0.3+0.03*Math.sin(u*2),2.7+0.25*Math.sin(t*12),cheer),0.2*cheer],armR:[lerp(0.3+0.03*Math.sin(u*2+1),2.7+0.25*Math.cos(t*12),cheer),-0.2*cheer],mouth:cheer>0.5?'grin':'smile',jump:cheer>0?0.06*cheer*Math.abs(Math.sin(t*9)):0.012*Math.sin(u*2.4),blink:BLINK(u),bendL:0.3*cheer,bendR:0.3*cheer});
     headTags(t,easeOut(seg(t,C.s6,C.s6+0.4))*(1-seg(t,gEnd-0.1,gEnd+0.4)));if(N_NEW>1&&t<gEnd){const a=easeOut(seg(t,C.s6+0.3,C.s6+0.7))*(1-seg(t,gEnd-0.3,gEnd));if(a>0){g.save();g.globalAlpha=a;pill('NEW IN THE LINE: '+(N_NEW-1),W/2,1600,40,'#5BE37A','#111',t,0,1e9);g.restore()}}
-    flash(t,C.s6,0.15);if(C.cta>C.hit){/* script order 'Hit follow and comment…' (Day 8) */pill('HIT '+CFG.cta+'!',W/2,330,74,'#FF3D7F','#fff',t,C.hit+0.05,C.cta);pill('COMMENT TO JOIN THE LINE!',W/2,330,60,'#fff','#111',t,C.cta,Math.min(TT-0.6,C.cta+2.0));if(TT-0.6>C.cta+2.4)pill('FIND YOUR NAME! 👀',W/2,330,64,'#FFD23F','#111',t,C.cta+2.1,TT-0.6)}else{pill('COMMENT TO JOIN THE LINE!',W/2,330,60,'#fff','#111',t,C.cta,C.hit+0.05);pill('HIT '+CFG.cta+'!',W/2,330,74,'#FF3D7F','#fff',t,C.hit+0.05,Math.min(TT-0.6,C.hit+2.2));if(TT-0.6>C.hit+2.6)pill('FIND YOUR NAME! 👀',W/2,330,64,'#FFD23F','#111',t,C.hit+2.3,TT-0.6);}comic('+1',W*0.7,700,110,t,C.hit+0.9,{life:0.8,rot:0.1,fill:'#5BE37A'});comic('+1',W*0.3,640,100,t,C.hit+1.5,{life:0.8,rot:-0.1,fill:'#5BE37A'})}
+    flash(t,C.s6,0.15);if(N_NEW>1)pill('FIND YOUR NAME! 👀',W/2,330,64,'#FFD23F','#111',t,C.s6+0.4,gEnd);if(C.cta>C.hit){pill('HIT '+CFG.cta+'!',W/2,330,74,'#FF3D7F','#fff',t,C.hit,C.cta);pill('COMMENT TO JOIN THE LINE!',W/2,330,60,'#fff','#111',t,C.cta,TT-0.5)}else{pill('COMMENT TO JOIN THE LINE!',W/2,330,60,'#fff','#111',t,C.cta,C.hit);pill('HIT '+CFG.cta+'!',W/2,330,74,'#FF3D7F','#fff',t,C.hit,TT-0.5)}comic('+1',W*0.7,700,110,t,C.hit+0.9,{life:0.8,rot:0.1,fill:'#5BE37A'});comic('+1',W*0.3,640,100,t,C.hit+1.5,{life:0.8,rot:-0.1,fill:'#5BE37A'})}
   vignette();captions(t)};
